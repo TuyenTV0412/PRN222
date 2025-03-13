@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CODE\\PRN222\\PRN222\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\prn222\\prn222\\prn222\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\prn222\\prn222\\prn222\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\prn222\\prn222\\prn222\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\prn222\\prn222\\prn222\\models\\prn222context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\models\\prn222context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "PRN222\\Models\\Book.cs",
+              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Book.cs",
+              "RelativeToolTip": "PRN222\\Models\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T06:22:48.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Author.cs",
+              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Author.cs",
+              "RelativeDocumentMoniker": "PRN222\\Models\\Author.cs",
+              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Author.cs",
+              "RelativeToolTip": "PRN222\\Models\\Author.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T06:13:07.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAPsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T06:10:44.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Prn222Context.cs",
+              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Prn222Context.cs",
+              "RelativeDocumentMoniker": "PRN222\\Models\\Prn222Context.cs",
+              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Prn222Context.cs",
+              "RelativeToolTip": "PRN222\\Models\\Prn222Context.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T06:05:44.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PRN222\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PRN222\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAiwEkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T09:03:35.068Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
