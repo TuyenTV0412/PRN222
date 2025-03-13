@@ -1,0 +1,53 @@
+﻿@model PRN222.Models.User
+
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+    var msg = TempData["msg"] as string;
+}
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <h2>Thông tin cá nhân</h2>
+            <p>Quản lý thông tin cá nhân của bạn một cách dễ dàng</p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="form-container">
+                @if (msg != null)
+                {
+                    <div class="alert alert-info">
+                        @msg
+                    </div>
+                }
+                <form method="post" action="@Url.Action("Edit", "Profile", new { id = Model.PersonId })" onsubmit="return validateForm()">
+                    <label for="Name">Họ tên:</label>
+                    <input type="text" name="Name" value="@Model.Name" class="form-control"><br>
+
+                    <input type="hidden" name="pid" value="@Model.PersonId">
+
+                    <label for="Gender">Giới tính:</label>
+                    <input type="text" name="Gender" value="@Model.Gender" class="form-control" readonly /><br>
+
+                    <label style="margin-top: 40px" for="DateOfBirth">Ngày sinh:</label>
+                    <input type="date" name="DateOfBirth" value="@Model.DateOfBirth?.ToString("yyyy-MM-dd")" class="form-control"><br>
+
+                    <label for="Address">Địa chỉ:</label>
+                    <input type="text" name="Address" value="@Model.Address" class="form-control"><br>
+
+                    <label for="Email">Email:</label>
+                    <input type="email" name="Email" value="@Model.Email" class="form-control"><br>
+
+                    <label for="Phone">Số điện thoại:</label>
+                    <input type="text" name="Phone" value="@Model.Phone" class="form-control"><br>
+
+                    <input type="submit" value="Cập nhật thông tin" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

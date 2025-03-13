@@ -1,0 +1,127 @@
+﻿@model PRN222.Models.Book  
+@{
+    ViewData["Title"] = "Book Detail";
+    var randomBooks = ViewBag.RandomBooks as List<PRN222.Models.Book>;
+    var categories = ViewBag.Categories as List<PRN222.Models.Category>;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                            @foreach (var category in categories)
+                            {
+                                <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">                  
+                    <!-- Featured Section Begin -->
+                    <div class="row">
+                        <aside class="col-sm-5 border-right">
+                            <article class="gallery-wrap">
+                                <div class="img-big-wrap">
+                                    <div>
+                                        <a href="#"><img src="@Model.Images" alt="Book Image"></a>
+                                    </div>
+                                </div>
+                            </article>
+                        </aside>
+
+                        <aside class="col-sm-7">
+                            <article class="card-body p-5">
+                                <h3 class="title mb-3">@Model.BookName</h3>
+                                <dl class="item-property">
+                                    <dd><p>Tác Giả: @Model.Author.AuthorName</p></dd>
+                                    <dd><p>Thể Loại: @Model.Category.CategoryName</p></dd>
+                                    <dd><p>Nhà xuất bản: <a href="@Url.Action("PublisherInfo", "Publisher", new { publisherID = Model.Publisher.PublisherId })">@Model.Publisher.PublisherName</a></p></dd>
+                                    <dd><p>Năm Xuất Bản: @Model.PublishingYear</p></dd>
+                                    <dd><p>Thông Tin: @Model.Description</p></dd>
+                                    <dd>
+                                        @if (User.Identity.IsAuthenticated) {
+                                            if (User.IsInRole("employee")) {
+                                                <a href="@Url.Action("UpdateBookInfo", "BookDetail", new { bookID = Model.BookId })" class="btn btn-primary">Cập nhật thông tin sách</a>
+                                            } else {
+                                                <a href="@Url.Action("Borrow", "BookDetail", new { bookID = Model.BookId })" class="btn btn-primary">Mượn</a>
+                                            }
+                                        } else {
+                                            <button class="btn btn-primary" onclick="alert('Bạn cần đăng nhập để mượn sách')">Mượn</button>
+                                        }
+                                        <a href="javascript:history.back()" class="btn btn-back">Back</a>
+                                    </dd>
+                                </dl>
+                            </article>
+                        </aside>
+                    </div>
+                    <!-- Featured Section End -->
+
+                    <div class="text-center"><h4>Sách Liên Quan</h4></div><br>
+                    <section class="featured spad">
+                        <div class="container">
+                            <div class="row featured__filter">
+                                @foreach (var book in randomBooks) // Lặp qua sách liên quan
+                                {
+                                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                        <div class="featured__item">
+                                            <div class="featured__item__pic set-bg" data-setbg="@book.Images">
+                                                <ul class="featured__item__pic__hover">
+                                                    <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId , category = book.CategoryId })"><i class="fa fa-retweet"></i></a></li>
+                                                    @* <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> *@
+                                                </ul>
+                                            </div>
+                                            <div class="featured__item__text">
+                                                <h6>
+                                                    <a href="#">
+                                                        @book.BookName
+                                                    </a>
+                                                </h6>
+                                                <h5 class="price">@book.Author.AuthorName</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </section>
+
+
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

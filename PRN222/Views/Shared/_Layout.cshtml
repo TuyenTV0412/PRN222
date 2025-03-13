@@ -5,74 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PRN222</title>
 
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    @RenderSection("Styles", required: false)  <!-- Đảm bảo rằng phần style được render ở đây -->
+
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
+	<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/css/elegant-icons.css" rel="stylesheet" />
+	<link href="~/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+	<link href="~/css/nice-select.css" rel="stylesheet" />
+	<link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+	<link href="~/css/site.css" rel="stylesheet" />
+	<link href="~/css/slicknav.min.css" rel="stylesheet" />
+	<link href="~/css/style.css" rel="stylesheet" />
     <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-link {
-            font-size: 1.1rem;
-            padding: 10px 15px;
-        }
-
-        /* Full-width container */
-        .full-width-container {
-            width: 100%;
-            padding: 20px;
-            max-width: 100%;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
+    @{
+        var username = Context.Session.GetString("Username");
+        var userId = Context.Session.GetInt32("UserId");
 
-    <!-- Header & Navbar -->
-    @* <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">PRN222</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> *@
+    }
 
     <header class="header">
         <div class="header__top">
@@ -81,8 +37,17 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
+                                @if (username != null)
+                                {
+                                    <li><i class="fa fa-envelope"></i>Xin Chào @username</li>
+                                    <li>Free Shipping for all Order of $99</li>
+                                }
+                                else
+                                {
+                                    <li><i class="fa fa-envelope"></i> Hãy đăng nhập để mượn sách</li>
+                                    <li>Free Shipping for all Order of $99</li>
+                                }
+                                
                             </ul>
                         </div>
                     </div>
@@ -94,53 +59,41 @@
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
-                            <div class="header__top__right__language">
-                                <img src="img/language.png" alt="">
-                                <div>English</div>
-                                <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
-                            </div>
-                            <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
-                            </div>
+
+
+                            @if (username != null)
+                            {
+                                <div class="header__top__right__social">
+                                    <a href="@Url.Action("Index", "Profile", new { id = userId })" style="margin-right: 10px; color: #007bff;"><i class="fa fa-cogs"></i> Manage</a>
+                                    <span>@username</span>
+                                    <a href="@Url.Action("Logout", "Login")" style="color: red;"><i class="fa fa-user"></i> Logout</a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="header__top__right__auth">
+                                    <a href="@Url.Action("Index", "Login")"><i class="fa fa-user"></i> Login</a>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="@Url.Action("Index", "Home")"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    @*  <nav class="header__menu">
-                    <ul>
-                    <li class="active"><a href="./index.html">Home</a></li>
-                    <li><a href="./shop-grid.html">Shop</a></li>
-                    <li>
-                    <a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                    <li><a href="./shop-details.html">Shop Details</a></li>
-                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                    <li><a href="./checkout.html">Check Out</a></li>
-                    <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    </ul>
-                    </nav> *@
+
                 </div>
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
                             <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
@@ -155,18 +108,11 @@
 
     <!-- Main Content Area -->
     <div class="full-width-container">
-        <main role="main">
+        <main >
             @RenderBody()
         </main>
     </div>
 
-    <!-- Footer -->
- @*    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 - PRN222 | <a class="text-white" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
-        </div>
-    </footer>
- *@
     <!-- Footer Section Begin -->
     <footer class="footer spad">
         <div class="container">
@@ -239,8 +185,20 @@
     </footer>
     <!-- Footer Section End -->
     <!-- Bootstrap & jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+@*     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> *@
+
+	<link href="d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml.css" rel="stylesheet" />
+	<a href="d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml">d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml</a>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/jquery-3.3.1.min.js"></script>
+	<script src="~/js/jquery-ui.min.js"></script>
+	<script src="~/js/jquery.nice-select.min.js"></script>
+	<script src="~/js/jquery.slicknav.js"></script>
+	<script src="~/js/main.js"></script>
+	<script src="~/js/mixitup.min.js"></script>
+	<script src="~/js/owl.carousel.min.js"></script>
+	<script src="~/js/site.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

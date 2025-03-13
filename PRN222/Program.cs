@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PRN222.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +6,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Cấu hình DbContext với SQL Server
 builder.Services.AddDbContext<Prn222Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Cấu hình Session
+builder.Services.AddDistributedMemoryCache(); // Sử dụng bộ nhớ để lưu trữ session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn session
+    options.Cookie.HttpOnly = true; // Chỉ có thể truy cập cookie từ phía server
+    options.Cookie.IsEssential = true; // Đảm bảo cookie luôn được gửi
+});
 
 var app = builder.Build();
 
@@ -15,7 +25,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -23,6 +32,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Cấu hình Session middleware
+app.UseSession(); // Đảm bảo gọi UseSession sau UseRouting và trước UseAuthorization
 
 app.UseAuthorization();
 
