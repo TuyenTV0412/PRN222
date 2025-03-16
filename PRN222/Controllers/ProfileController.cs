@@ -30,7 +30,7 @@ namespace PRN222.Controllers
         }
 
 
-        // Handle profile update (POST method)
+        
         [HttpPost]
         public async Task<IActionResult> Edit(int id, string name, string gender, DateOnly dateOfBirth, string address, string email, string phone)
         {

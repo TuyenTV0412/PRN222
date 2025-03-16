@@ -39,13 +39,27 @@
                             <i class="fa fa-bars"></i>
                             <span>All departments</span>
                         </div>
-                        <ul>
-                            <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
-                            @foreach (var category in categories)
-                            {
-                                <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
-                            }
-                        </ul>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Giả sử RoleId của "employee" là 1
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                                @foreach (var category in categories)
+                                {
+                                    <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
+                                }
+                            </ul>
+                        }
+
                     </div>
                 </div>
                 <div class="col-lg-9">                  
@@ -71,15 +85,22 @@
                                     <dd><p>Năm Xuất Bản: @Model.PublishingYear</p></dd>
                                     <dd><p>Thông Tin: @Model.Description</p></dd>
                                     <dd>
-                                        @if (User.Identity.IsAuthenticated) {
-                                            if (User.IsInRole("employee")) {
+                                        @if (Context.Session.GetInt32("UserId") != null)
+                                        {
+                                            if (Context.Session.GetInt32("RoleId") == 2)
+                                            {
                                                 <a href="@Url.Action("UpdateBookInfo", "BookDetail", new { bookID = Model.BookId })" class="btn btn-primary">Cập nhật thông tin sách</a>
-                                            } else {
+                                            }
+                                            else
+                                            {
                                                 <a href="@Url.Action("Borrow", "BookDetail", new { bookID = Model.BookId })" class="btn btn-primary">Mượn</a>
                                             }
-                                        } else {
+                                        }
+                                        else
+                                        {
                                             <button class="btn btn-primary" onclick="alert('Bạn cần đăng nhập để mượn sách')">Mượn</button>
                                         }
+
                                         <a href="javascript:history.back()" class="btn btn-back">Back</a>
                                     </dd>
                                 </dl>
@@ -123,5 +144,6 @@
             </div>
         </div>
     </section>
+
 </body>
 </html>

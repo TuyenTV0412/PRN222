@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\CODE\PRN222\PRN222\PRN222
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/CODE/PRN222/PRN222/PRN222/Views/Admin/AdminHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ib21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CODE/PRN222/PRN222/PRN222/Views/Admin/ListUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CODE/PRN222/PRN222/PRN222/Views/Book/UpdateBookInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xVcGRhdGVCb29rSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CODE/PRN222/PRN222/PRN222/Views/Home/BookDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCb29rRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/CODE/PRN222/PRN222/PRN222/Views/User/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CODE/PRN222/PRN222/PRN222/Views/User/UserDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CODE/PRN222/PRN222/PRN222/Views/_ViewImports.cshtml]

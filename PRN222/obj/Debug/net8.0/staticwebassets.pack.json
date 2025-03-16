@@ -113,6 +113,14 @@
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Id": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\hihi.jpg",
+      "PackagePath": "staticwebassets\\img\\Book\\hihi.jpg"
+    },
+    {
+      "Id": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\adminn.jpg",
+      "PackagePath": "staticwebassets\\img\\adminn.jpg"
+    },
+    {
       "Id": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\banner\\banner-1.jpg",
       "PackagePath": "staticwebassets\\img\\banner\\banner-1.jpg"
     },
