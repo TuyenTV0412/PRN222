@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qSJ4VKAXPIAkFxKg2LiLQ6mc5XEV0inHQkABeHt7N1g=",
+  "Hash": "+Xgm3FsAMLjL704BpAYKYBWZwoJi2UyiL6iaVbSMMlM=",
   "Source": "PRN222",
   "BasePath": "_content/PRN222",
   "Mode": "Default",
@@ -435,6 +435,25 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Identity": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\adminn.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/adminn.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\adminn.jpg"
+    },
+    {
       "Identity": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\banner\\banner-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
@@ -699,6 +718,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\blog\\sidebar\\sr-3.jpg"
+    },
+    {
+      "Identity": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\hihi.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Book/hihi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Book\\hihi.jpg"
     },
     {
       "Identity": "D:\\CODE\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\breadcrumb.jpg",

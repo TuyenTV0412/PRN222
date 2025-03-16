@@ -42,13 +42,27 @@
                             <i class="fa fa-bars"></i>
                             <span>All departments</span>
                         </div>
-                        <ul>
-                            <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
-                            @foreach (var category in categories)
-                            {
-                                <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
-                            }
-                        </ul>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Giả sử RoleId của "employee" là 1
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                                @foreach (var category in categories)
+                                {
+                                    <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
+                                }
+                            </ul>
+                        }
+
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -100,7 +114,7 @@
                             <div class="featured__item__pic set-bg" data-setbg="@book.Images">
                                 <ul class="featured__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId , category = book.CategoryId })"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId })"><i class="fa fa-retweet"></i></a></li>
                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
@@ -145,7 +159,7 @@
                             <div class="featured__item__pic set-bg" data-setbg="@book.Images">
                                 <ul class="featured__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId , category = book.CategoryId })"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>

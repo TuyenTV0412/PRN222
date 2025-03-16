@@ -1,0 +1,87 @@
+﻿@model List<PRN222.Models.User>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Người Dùng</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+</head>
+<body>
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                            <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <h3><strong>Quản Lý Người Dùng</strong></h3>
+                    <!-- Form tìm kiếm -->
+                    <form method="post" action="@Url.Action("GetAllUser", "Admin")">
+                        <div class="mb-3 d-flex">
+                            <input required name="txt" class="form-control me-2" type="text" value="@ViewBag.SearchTerm" placeholder="Tìm kiếm theo tên người dùng">
+                            <button type="submit" class="btn btn-primary" style="font-size: 7px">Tìm kiếm</button>
+                        </div>
+                    </form>
+
+
+                    <!-- Bảng danh sách người dùng -->
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Tài Khoản</th>
+                                <th>Vai Trò</th>
+                                <th>Chi Tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model)
+                            {
+                                <tr>
+                                    <td>@user.Username</td>
+                                    <td>@user.Role.RoleName</td> <!-- Hiển thị tên vai trò -->
+                                    <td><a href="@Url.Action("UserDetail", "Admin", new { id = user.PersonId })">Chi tiết</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

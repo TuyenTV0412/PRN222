@@ -1,0 +1,141 @@
+﻿@model PRN222.Models.Book
+@{
+    ViewData["Title"] = "Cập nhật thông tin sách";
+    var categories = ViewBag.Categories as List<PRN222.Models.Category>;
+    var authors = ViewBag.Author as List<PRN222.Models.Author>;
+    var publishers = ViewBag.Publisher as List<PRN222.Models.Publisher>;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cập nhật thông tin sách</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>Quản lý</span>
+                    </div>
+                    @if (Context.Session.GetInt32("RoleId") == 2) // Kiểm tra RoleId của nhân viên
+                    {
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                            <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                        </ul>
+                    }
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <h2 style="margin-bottom: 20px">Cập nhật thông tin sách</h2>
+
+                <!-- Form for updating book information -->
+                @if (Model != null)
+                {
+                        <form asp-action="UpdateBookInfo" method="post">
+                        @Html.HiddenFor(model => model.BookId)
+
+
+                            <div class="form-group">
+                                <label asp-for="BookName">Tên sách:</label>
+                                @Html.TextAreaFor(model => model.BookName, new { @class = "form-control", rows = 2, cols = 20, id = "BookName" })
+                            </div>
+
+                            <!-- Author Dropdown -->
+                            <div class="form-group">
+                                <label asp-for="AuthorId">Tác giả:</label>
+                                @Html.DropDownListFor(model => model.AuthorId,
+                                         new SelectList(ViewBag.Author, "AuthorId", "AuthorName", Model.AuthorId),
+                                         "Chọn tác giả",
+                                         new { @class = "form-control" })
+                            </div>
+
+                            <!-- Category Dropdown -->
+                            <div class="form-group">
+                                <label asp-for="CategoryId">Thể loại:</label>
+                                @Html.DropDownListFor(model => model.CategoryId,
+                                         new SelectList(ViewBag.Categories, "CategoryId", "CategoryName", Model.CategoryId),
+                                         "Chọn thể loại",
+                                         new { @class = "form-control" })
+                            </div>
+
+                            <!-- Publisher Dropdown -->
+                            <div class="form-group">
+                                <label asp-for="PublisherId">Nhà xuất bản:</label>
+                                @Html.DropDownListFor(model => model.PublisherId,
+                                         new SelectList(ViewBag.Publisher, "PublisherId", "PublisherName", Model.PublisherId),
+                                         "Chọn nhà xuất bản",
+                                         new { @class = "form-control" })
+                            </div>
+
+
+
+
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label asp-for="Description">Mô tả:</label>
+                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 4, cols = 50 })
+                        </div>
+
+                        <!-- Publishing Year -->
+                        <div class="form-group">
+                            <label asp-for="PublishingYear">Năm xuất bản:</label>
+                            @Html.TextBoxFor(model => model.PublishingYear, new { @class = "form-control", type = "number", id = "publishingYear" })
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="form-group">
+                            <label asp-for="Quantity">Số lượng:</label>
+                            @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control", type = "number", id = "quantity" })
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    </form>
+                }
+
+                <!-- Back Button -->
+                <div style="float: right; margin-top: 10px;">
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

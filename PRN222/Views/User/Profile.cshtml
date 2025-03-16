@@ -1,11 +1,66 @@
 ﻿@model PRN222.Models.User
-
 @{
     ViewData["Title"] = "Thông tin cá nhân";
     var msg = TempData["msg"] as string;
 }
 
-<section class="hero">
+<style>
+    /* Thêm CSS cho form */
+    .form-container {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Cải thiện giao diện input */
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Thêm màu nền cho button */
+    .btn-primary {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Thêm màu nền cho button quay lại */
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Thêm CSS cho alert */
+    .alert {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #d9edf7;
+        border: 1px solid #bce8f1;
+        color: #31708f;
+    }
+
+    /* Thêm CSS cho label */
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+ 
+</style>
+
+<section class="hero" style="margin-left: 585px">
     <div class="container">
         <div class="hero-text">
             <h2>Thông tin cá nhân</h2>
@@ -25,27 +80,44 @@
                     </div>
                 }
                 <form method="post" action="@Url.Action("Edit", "Profile", new { id = Model.PersonId })" onsubmit="return validateForm()">
-                    <label for="Name">Họ tên:</label>
-                    <input type="text" name="Name" value="@Model.Name" class="form-control"><br>
+                    <div class="form-group">
+                        <label for="Name">Họ tên:</label>
+                        <input type="text" name="Name" value="@Model.Name" class="form-control">
+                    </div>
 
                     <input type="hidden" name="pid" value="@Model.PersonId">
 
-                    <label for="Gender">Giới tính:</label>
-                    <input type="text" name="Gender" value="@Model.Gender" class="form-control" readonly /><br>
+                    <div class="form-group">
+                        <label for="Gender">Giới tính:</label>
+                        <input type="text" name="Gender" value="@Model.Gender" class="form-control" readonly />
+                    </div>
 
-                    <label style="margin-top: 40px" for="DateOfBirth">Ngày sinh:</label>
-                    <input type="date" name="DateOfBirth" value="@Model.DateOfBirth?.ToString("yyyy-MM-dd")" class="form-control"><br>
+                    <div class="form-group">
+                        <label for="DateOfBirth">Ngày sinh:</label>
+                        <input type="date" name="DateOfBirth" value="@Model.DateOfBirth?.ToString("yyyy-MM-dd")" class="form-control">
+                    </div>
 
-                    <label for="Address">Địa chỉ:</label>
-                    <input type="text" name="Address" value="@Model.Address" class="form-control"><br>
+                    <div class="form-group">
+                        <label for="Address">Địa chỉ:</label>
+                        <input type="text" name="Address" value="@Model.Address" class="form-control">
+                    </div>
 
-                    <label for="Email">Email:</label>
-                    <input type="email" name="Email" value="@Model.Email" class="form-control"><br>
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" name="Email" value="@Model.Email" class="form-control">
+                    </div>
 
-                    <label for="Phone">Số điện thoại:</label>
-                    <input type="text" name="Phone" value="@Model.Phone" class="form-control"><br>
+                    <div class="form-group">
+                        <label for="Phone">Số điện thoại:</label>
+                        <input type="text" name="Phone" value="@Model.Phone" class="form-control">
+                    </div>
 
-                    <input type="submit" value="Cập nhật thông tin" class="btn btn-primary">
+                    <div class="form-group">
+                        <input type="submit" value="Cập nhật thông tin" class="btn btn-primary">
+                        <div style="float: right; margin-top: 10px;">
+                            <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

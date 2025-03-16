@@ -1,0 +1,87 @@
+﻿@model PRN222.Models.Book
+@{
+    ViewData["Title"] = "Admin Home";
+    var randomBooks = ViewBag.RandomBooks as List<PRN222.Models.Book>;
+    var categories = ViewBag.Categories as List<PRN222.Models.Category>;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Nhân viên
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else if (Context.Session.GetInt32("RoleId") == 3) // Admin
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                                <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                                <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                                <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else // Người dùng thông thường
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                                @foreach (var category in categories)
+                                {
+                                    <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <p style="text-align: center; font-size: 30px"><strong>THƯ VIỆN</strong></p>
+                    <img style="border-radius: 20px" src="~/img/adminn.jpg" />
+                </div>
+                    <!-- Featured Section End -->
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

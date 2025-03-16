@@ -14,30 +14,32 @@ namespace PRN222.Controllers
         }
 
         // Hiển thị chi tiết sách
-        public async Task<IActionResult> Index(int id, int category)
+        public async Task<IActionResult> Index(int id)
         {
             // Lấy thông tin sách từ database theo BookID
             var book = await _prn222Context.Books
-                                             .Include(b => b.Author)      // Bao gồm thông tin tác giả
-                                             .Include(b => b.Category)    // Bao gồm thông tin danh mục
-                                             .Include(b => b.Publisher)   // Bao gồm thông tin nhà xuất bản
-                                             .FirstOrDefaultAsync(b => b.BookId == id);  // Lấy sách theo BookID
+                                         .Include(b => b.Author)      // Bao gồm thông tin tác giả
+                                         .Include(b => b.Category)    // Bao gồm thông tin danh mục
+                                         .Include(b => b.Publisher)   // Bao gồm thông tin nhà xuất bản
+                                         .FirstOrDefaultAsync(b => b.BookId == id);  // Lấy sách theo BookID
 
             if (book == null)
             {
                 return NotFound();  // Nếu sách không tìm thấy, trả về lỗi 404
             }
 
+            // Lấy CategoryId từ sách
+            var categoryId = book.CategoryId;
+
             // Lấy 4 sách ngẫu nhiên cùng category
             var randomBooks = await _prn222Context.Books
-                                                   .Where(b => b.CategoryId == category)  // Lọc sách theo category
+                                                   .Where(b => b.CategoryId == categoryId && b.BookId != id)  // Lọc sách theo category và loại bỏ sách hiện tại
                                                    .Include(b => b.Author)
-                                                  .Include(b => b.Category)
-                                                  .Include(b => b.Publisher)
-                                                  .OrderByDescending(b => b.BookId)
-                                                  .Take(4)
-                                                  .ToListAsync();
-
+                                                   .Include(b => b.Category)
+                                                   .Include(b => b.Publisher)
+                                                   .OrderByDescending(b => b.BookId)
+                                                   .Take(4)
+                                                   .ToListAsync();
 
             var categories = await _prn222Context.Categories.ToListAsync(); // Lấy danh sách category
             ViewBag.Categories = categories;
@@ -46,6 +48,79 @@ namespace PRN222.Controllers
 
             return View("~/Views/Home/BookDetail.cshtml", book);  // Đảm bảo đường dẫn chính xác
         }
+
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateBookInfo(int bookID)
+        {
+            var book = await _prn222Context.Books
+                                           .Include(b => b.Author)
+                                           .Include(b => b.Category)
+                                           .Include(b => b.Publisher)
+                                           .FirstOrDefaultAsync(b => b.BookId == bookID);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            var categories = await _prn222Context.Categories.ToListAsync();
+            var authors = await _prn222Context.Authors.ToListAsync();
+            var publishers = await _prn222Context.Publishers.ToListAsync();
+
+            ViewBag.Categories = categories;
+            ViewBag.Author = authors;
+            ViewBag.Publisher = publishers;
+
+            // Chỉ định đường dẫn cụ thể đến view
+            return View("~/Views/Book/UpdateBookInfo.cshtml", book);
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateBookInfo(Book updatedBook)
+        {
+           
+            // Lấy thông tin sách từ database dựa trên BookId
+            var book = await _prn222Context.Books.FirstOrDefaultAsync(b => b.BookId == updatedBook.BookId);
+
+            if (book == null)
+            {
+                return NotFound(); // Nếu không tìm thấy sách, trả về lỗi 404
+            }
+
+            // Cập nhật thông tin sách
+            book.BookName = updatedBook.BookName;
+            book.AuthorId = updatedBook.AuthorId;
+            book.CategoryId = updatedBook.CategoryId;
+            book.PublisherId = updatedBook.PublisherId;
+            book.Description = updatedBook.Description;
+            book.PublishingYear = updatedBook.PublishingYear;
+            book.Quantity = updatedBook.Quantity;
+
+            try
+            {
+                // Lưu thay đổi vào cơ sở dữ liệu
+                await _prn222Context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Cập nhật thông tin sách thành công!";
+                return RedirectToAction("Index", "BookDetail", new { id = updatedBook.BookId });
+            }
+            catch (DbUpdateException ex)
+            {
+                ModelState.AddModelError("", $"Không thể lưu thay đổi. Lỗi: {ex.Message}");
+                // Tải lại danh sách để hiển thị lại form
+                ViewBag.Categories = await _prn222Context.Categories.ToListAsync();
+                ViewBag.Author = await _prn222Context.Authors.ToListAsync();
+                ViewBag.Publisher = await _prn222Context.Publishers.ToListAsync();
+                return View(updatedBook);
+            }
+        }
+
+
+
+
 
     }
 }
