@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using PRN222.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +22,22 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; // Đảm bảo cookie luôn được gửi
 });
 
+
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
+// Cấu hình Authentication với Google
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+})
+.AddCookie() // Sử dụng Cookie Authentication
+.AddGoogle(options =>
+{
+    options.ClientId = "745365451388-5bb4o66pmqb9rqrd2vdufr5p0gsk7ep4.apps.googleusercontent.com";
+    options.ClientSecret = "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";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,6 +51,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Cấu hình Authentication & Authorization Middleware
+app.UseAuthentication();  // Thêm dòng này để kích hoạt Authentication
+app.UseAuthorization();
+app.UseSession(); // Đảm bảo gọi UseSession sau UseRouting và trước UseAuthorization
 
 // Cấu hình Session middleware
 app.UseSession(); // Đảm bảo gọi UseSession sau UseRouting và trước UseAuthorization
