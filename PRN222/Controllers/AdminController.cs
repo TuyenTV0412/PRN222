@@ -20,6 +20,11 @@ namespace PRN222.Controllers
             return View();
         }
 
+        public IActionResult OtherSettings()
+        {
+            return View("~/Views/Admin/OtherSettings.cshtml");
+        }
+
         public async Task<IActionResult> GetAllUser()
         {
             List<User> users;
@@ -92,6 +97,86 @@ namespace PRN222.Controllers
             return RedirectToAction("GetAllUser", "Admin");
         }
 
+        public async Task<IActionResult> ManageBooks(string txt, int page = 1)
+        {
+            var books = await _prn222Context.Books
+                                            .Include(b => b.Author)
+                                            .Include(b => b.Category)
+                                            .Include(b => b.Publisher)
+                                            .ToListAsync();
+
+            if (!string.IsNullOrEmpty(txt))
+            {
+                books = books.Where(b => b.BookName.Contains(txt)).ToList();
+            }
+
+            // Phân trang
+            var pageSize = 10;
+            var totalBooks = books.Count();
+            var totalPages = (int)Math.Ceiling((double)totalBooks / pageSize);
+            var booksToShow = books.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentPage = page;
+            ViewBag.SearchTerm = txt;
+
+            return View("~/Views/Book/ListBook.cshtml", booksToShow);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteBook(int bookID)
+        {
+            var book = await _prn222Context.Books.FirstOrDefaultAsync(b => b.BookId == bookID);
+            if (book == null)
+            {
+                return NotFound(); // Nếu không tìm thấy sách, trả về lỗi 404
+            }
+
+            try
+            {
+                _prn222Context.Books.Remove(book);
+                await _prn222Context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Xóa sách thành công!";
+                return RedirectToAction("ManageBooks", "Admin");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Không thể xóa sách. Lỗi: {ex.Message}";
+                return RedirectToAction("ManageBooks", "Admin");
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult> AddBook()
+        {
+            var categories = await _prn222Context.Categories.ToListAsync();
+            var authors = await _prn222Context.Authors.ToListAsync();
+            var publishers = await _prn222Context.Publishers.ToListAsync();
+
+            ViewBag.Categories = categories;
+            ViewBag.Authors = authors;
+            ViewBag.Publishers = publishers;
+
+            return View("~/Views/Book/AddBook.cshtml");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddBook(Book newBook)
+        {
+
+            try
+            {
+                await _prn222Context.Books.AddAsync(newBook);
+                await _prn222Context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Thêm sách thành công!";
+                return RedirectToAction("ManageBooks", "Admin");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Không thể thêm sách. Lỗi: {ex.Message}";
+                return RedirectToAction("ManageBooks", "Admin");
+            }
+        }
 
 
 

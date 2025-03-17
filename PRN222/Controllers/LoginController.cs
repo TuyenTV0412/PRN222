@@ -75,6 +75,7 @@ namespace PRN222.Controllers
             // Xóa session khi logout
             HttpContext.Session.Remove("Username");
             HttpContext.Session.Remove("Email");
+            HttpContext.Session.Remove("RoleId");
 
             // Xóa cookies
             Response.Cookies.Delete("cname");

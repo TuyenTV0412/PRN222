@@ -1,14 +1,18 @@
-﻿@model List<PRN222.Models.User>
+﻿@{
+    ViewData["Title"] = "Cài Đặt Khác";
+}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quản Lý Người Dùng</title>
+    <title>@ViewData["Title"]</title>
 
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
 
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/elegant-icons.css" rel="stylesheet" />
@@ -19,9 +23,28 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="~/css/slicknav.min.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
-    <!-- Custom Styles -->
+    <!-- Custom CSS -->
+    <style>
+        .settings-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+            .settings-container h3 {
+                margin-bottom: 30px;
+            }
+
+        .btn-settings {
+            width: 250px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
@@ -46,36 +69,22 @@
 
                 <!-- Main Content -->
                 <div class="col-lg-9">
-                    <h3><strong>Quản Lý Người Dùng</strong></h3>
-                    <!-- Form tìm kiếm -->
-                    <form method="post" action="@Url.Action("GetAllUser", "Admin")">
-                        <div class="mb-3 d-flex">
-                            <input required name="txt" class="form-control me-2" type="text" value="@ViewBag.SearchTerm" placeholder="Tìm kiếm theo tên người dùng">
-                            <button type="submit" class="btn btn-primary" style="font-size: 7px">Tìm kiếm</button>
-                        </div>
-                    </form>
+                    <h3><strong>Cài Đặt Khác</strong></h3>
+                    <div class="settings-container">
+                       
 
+                        <!-- Quản lý tác giả -->
+                        <a href="@Url.Action("ManageAuthors", "Admin")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
 
-                    <!-- Bảng danh sách người dùng -->
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Tài Khoản</th>
-                                <th>Vai Trò</th>
-                                <th>Chi Tiết</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var user in Model)
-                            {
-                                <tr>
-                                    <td>@user.Username</td>
-                                    <td>@user.Role.RoleName</td> <!-- Hiển thị tên vai trò -->
-                                    <td><a href="@Url.Action("UserDetail", "Admin", new { id = user.PersonId })">Chi tiết</a></td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+                        <!-- Quản lý thể loại -->
+                        <a href="@Url.Action("ManageCategories", "Admin")" class="btn btn-success btn-settings">Quản Lý Thể Loại</a>
+
+                        <!-- Quản lý nhà xuất bản -->
+                        <a href="@Url.Action("ManagePublishers", "Admin")" class="btn btn-info btn-settings">Quản Lý Nhà Xuất Bản</a>
+
+                        <!-- Back Button -->
+                        
+                    </div>
                 </div>
             </div>
         </div>

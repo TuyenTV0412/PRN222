@@ -93,6 +93,13 @@ namespace PRN222.Controllers
             return View("Index", books); // Render lại trang Index nhưng với dữ liệu lọc theo Category
         }
 
+        public async Task<IActionResult> Author()
+        {
+            var authors = await _prn222Context.Authors.ToListAsync();
+            ViewBag.Authors = authors;
+            return View("~/Views/Home/Author.cshtml", authors);
+        }
+
 
     }
 }

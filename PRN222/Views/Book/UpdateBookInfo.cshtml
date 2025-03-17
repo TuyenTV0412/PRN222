@@ -39,24 +39,45 @@
     <div class="container">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-lg-3">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span>Quản lý</span>
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Nhân viên
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else if (Context.Session.GetInt32("RoleId") == 3) // Admin
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                                <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                                <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                                <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else // Người dùng thông thường
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                                @foreach (var category in categories)
+                                {
+                                    <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
+                                }
+                            </ul>
+                        }
                     </div>
-                    @if (Context.Session.GetInt32("RoleId") == 2) // Kiểm tra RoleId của nhân viên
-                    {
-                        <ul>
-                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
-                            <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
-                            <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
-                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
-                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
-                        </ul>
-                    }
                 </div>
-            </div>
 
             <!-- Main Content -->
             <div class="col-lg-9">
@@ -129,7 +150,15 @@
 
                 <!-- Back Button -->
                 <div style="float: right; margin-top: 10px;">
-                    <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                        @if (Context.Session.GetInt32("RoleId") == 3)
+                        {
+                            <a href="@Url.Action("ManageBooks", "Admin")" class="btn btn-secondary">Quay lại</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                        }
+                        
                 </div>
             </div>
         </div>

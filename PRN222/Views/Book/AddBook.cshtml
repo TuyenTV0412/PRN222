@@ -1,0 +1,126 @@
+﻿@model PRN222.Models.Book
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Sách Mới</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                            <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                            <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <h3><strong>Thêm Sách Mới</strong></h3>
+                    <form asp-action="AddBook" asp-controller="Admin" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="BookName">Tên sách:</label>
+                            <input asp-for="BookName" class="form-control" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="AuthorId">Tác giả:</label>
+                            <select asp-for="AuthorId" class="form-select" required>
+                                <option value="">Chọn tác giả</option>
+                                @foreach (var author in ViewBag.Authors)
+                                {
+                                    <option value="@author.AuthorId">@author.AuthorName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CategoryId">Danh mục:</label>
+                            <select asp-for="CategoryId" class="form-select" required>
+                                <option value="">Chọn thể loại</option>
+                                @foreach (var category in ViewBag.Categories)
+                                {
+                                    <option value="@category.CategoryId">@category.CategoryName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PublisherId">Nhà xuất bản:</label>
+                            <select asp-for="PublisherId" class="form-select" required>
+                                <option value="">Chọn nhà xuất bản</option>
+                                @foreach (var publisher in ViewBag.Publishers)
+                                {
+                                    <option value="@publisher.PublisherId">@publisher.PublisherName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Images">Ảnh:</label>
+                            <input asp-for="Images" type="file" class="form-control" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PublishingYear">Năm xuất bản:</label>
+                            <input asp-for="PublishingYear" type="number" class="form-control" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Description">Mô tả:</label>
+                            <textarea asp-for="Description" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Quantity">Số lượng:</label>
+                            <input asp-for="Quantity" type="number" class="form-control" required />
+                        </div>
+
+                        <input type="submit" value="Thêm sách" class="btn btn-primary" />
+                    </form>
+
+                    <!-- Back Button -->
+                    <div style="float: right; margin-top: 10px;">
+                        <a href="@Url.Action("ManageBooks", "Admin")" class="btn btn-secondary">Quay lại</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

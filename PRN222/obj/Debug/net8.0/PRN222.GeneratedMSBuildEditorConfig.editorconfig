@@ -26,8 +26,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdFVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CODE/PRN222/PRN222/PRN222/Views/Admin/OtherSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3RoZXJTZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CODE/PRN222/PRN222/PRN222/Views/Book/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xBZGRCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CODE/PRN222/PRN222/PRN222/Views/Book/ListBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xMaXN0Qm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CODE/PRN222/PRN222/PRN222/Views/Book/UpdateBookInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xVcGRhdGVCb29rSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CODE/PRN222/PRN222/PRN222/Views/Home/Author.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRob3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CODE/PRN222/PRN222/PRN222/Views/Home/BookDetail.cshtml]
