@@ -36,19 +36,14 @@ public partial class Prn222Context : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
-                                            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-        IConfiguration configuration = builder.Build();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
-
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-GDKS90K\\SQLEXPRESS;Database=PRN222;User Id=sa;Password=123;Encrypt=False;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.HasKey(e => e.AuthorId).HasName("PK__Author__70DAFC141334A6E9");
+            entity.HasKey(e => e.AuthorId).HasName("PK__Author__70DAFC14E45D747C");
 
             entity.ToTable("Author");
 
@@ -62,7 +57,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<Book>(entity =>
         {
-            entity.HasKey(e => e.BookId).HasName("PK__Book__3DE0C227998552C4");
+            entity.HasKey(e => e.BookId).HasName("PK__Book__3DE0C227B4DE4293");
 
             entity.ToTable("Book");
 
@@ -80,22 +75,22 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Author).WithMany(p => p.Books)
                 .HasForeignKey(d => d.AuthorId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Book__AuthorID__2F10007B");
+                .HasConstraintName("FK__Book__AuthorID__5AEE82B9");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Books)
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Book__CategoryID__30F848ED");
+                .HasConstraintName("FK__Book__CategoryID__5CD6CB2B");
 
             entity.HasOne(d => d.Publisher).WithMany(p => p.Books)
                 .HasForeignKey(d => d.PublisherId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Book__PublisherI__300424B4");
+                .HasConstraintName("FK__Book__PublisherI__5BE2A6F2");
         });
 
         modelBuilder.Entity<Borrow>(entity =>
         {
-            entity.HasKey(e => e.BorrowId).HasName("PK__Borrow__4295F85FD9F4CC6C");
+            entity.HasKey(e => e.BorrowId).HasName("PK__Borrow__4295F85F42DC2960");
 
             entity.ToTable("Borrow");
 
@@ -105,12 +100,12 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Person).WithMany(p => p.Borrows)
                 .HasForeignKey(d => d.PersonId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Borrow__PersonID__33D4B598");
+                .HasConstraintName("FK__Borrow__PersonID__5DCAEF64");
         });
 
         modelBuilder.Entity<BorrowDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__BorrowDe__3214EC07E51ECDCC");
+            entity.HasKey(e => e.Id).HasName("PK__BorrowDe__3214EC07FA4E1FE3");
 
             entity.ToTable("BorrowDetail");
 
@@ -120,17 +115,17 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Book).WithMany(p => p.BorrowDetails)
                 .HasForeignKey(d => d.BookId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__BorrowDet__BookI__37A5467C");
+                .HasConstraintName("FK__BorrowDet__BookI__5FB337D6");
 
             entity.HasOne(d => d.Borrow).WithMany(p => p.BorrowDetails)
                 .HasForeignKey(d => d.BorrowId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__BorrowDet__Borro__36B12243");
+                .HasConstraintName("FK__BorrowDet__Borro__5EBF139D");
         });
 
         modelBuilder.Entity<Card>(entity =>
         {
-            entity.HasKey(e => e.CardId).HasName("PK__Card__55FECD8EE55A3807");
+            entity.HasKey(e => e.CardId).HasName("PK__Card__55FECD8EEF5678C9");
 
             entity.ToTable("Card");
 
@@ -140,12 +135,12 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Person).WithMany(p => p.Cards)
                 .HasForeignKey(d => d.PersonId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Card__PersonID__3E52440B");
+                .HasConstraintName("FK__Card__PersonID__60A75C0F");
         });
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A2B68906890");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A2BFE8F1B09");
 
             entity.ToTable("Category");
 
@@ -155,7 +150,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<Publisher>(entity =>
         {
-            entity.HasKey(e => e.PublisherId).HasName("PK__Publishe__4C657E4BD80D26A9");
+            entity.HasKey(e => e.PublisherId).HasName("PK__Publishe__4C657E4BB6727786");
 
             entity.ToTable("Publisher");
 
@@ -175,7 +170,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<Punish>(entity =>
         {
-            entity.HasKey(e => e.PunishId).HasName("PK__Punish__7FB6D512E5E89852");
+            entity.HasKey(e => e.PunishId).HasName("PK__Punish__7FB6D51289CC52CB");
 
             entity.ToTable("Punish");
 
@@ -187,17 +182,17 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Book).WithMany(p => p.Punishes)
                 .HasForeignKey(d => d.BookId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Punish__BookID__3A81B327");
+                .HasConstraintName("FK__Punish__BookID__619B8048");
 
             entity.HasOne(d => d.Person).WithMany(p => p.Punishes)
                 .HasForeignKey(d => d.PersonId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Punish__PersonID__3B75D760");
+                .HasConstraintName("FK__Punish__PersonID__628FA481");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__8AFACE3ACDC8E716");
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__8AFACE3A503ABF5B");
 
             entity.ToTable("Role");
 
@@ -207,7 +202,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.PersonId).HasName("PK__Users__AA2FFB8564BA2804");
+            entity.HasKey(e => e.PersonId).HasName("PK__Users__AA2FFB85675D06CC");
 
             entity.Property(e => e.PersonId).HasColumnName("PersonID");
             entity.Property(e => e.Address).HasMaxLength(200);
@@ -216,9 +211,7 @@ public partial class Prn222Context : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.Gender).HasMaxLength(6);
             entity.Property(e => e.Name).HasMaxLength(50);
-            entity.Property(e => e.Password)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+            entity.Property(e => e.Password).HasMaxLength(500);
             entity.Property(e => e.Phone)
                 .HasMaxLength(15)
                 .IsUnicode(false);
@@ -230,7 +223,7 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Users__RoleID__2A4B4B5E");
+                .HasConstraintName("FK__Users__RoleID__6383C8BA");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -1,0 +1,14 @@
+﻿@model PRN222.ViewModel.VerifyOtpViewModel
+@{
+    ViewData["Title"] = "Xác Minh OTP";
+}
+
+<h2>Xác Minh OTP</h2>
+<form method="post">
+    <label>Email:</label>
+    <input asp-for="Email" class="form-control" required />
+    <label>Nhập Mã OTP:</label>
+    <input asp-for="OtpCode" class="form-control" required />
+    <button type="submit" class="btn btn-success mt-2">Xác Minh</button>
+</form>
+<p style="color: red;">@ViewBag.Error</p>
