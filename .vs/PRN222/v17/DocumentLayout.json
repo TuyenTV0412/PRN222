@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\home\\author.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\admin\\listuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\admin\\listuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\book\\listbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\book\\listbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\prn222\\prn222\\prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\book\\addbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\book\\addbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\PRN222\\PRN222\\prn222\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -128,40 +128,27 @@
               "RelativeDocumentMoniker": "PRN222\\Views\\Home\\Author.cshtml",
               "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Home\\Author.cshtml",
               "RelativeToolTip": "PRN222\\Views\\Home\\Author.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAEIAAAAwAAAA",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAEIAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-17T06:32:40.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDetail.cshtml",
-              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\User\\UserDetail.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\User\\UserDetail.cshtml",
-              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\User\\UserDetail.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\User\\UserDetail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-15T19:26:08.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "PRN222\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAANEAAAAxAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAANEAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-13T12:44:01.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "PRN222\\Controllers\\HomeController.cs",
@@ -169,12 +156,11 @@
               "RelativeToolTip": "PRN222\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T09:03:35.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T09:03:35.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Home\\Index.cshtml",
@@ -182,12 +168,11 @@
               "RelativeToolTip": "PRN222\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAADAAAAAAAAAAAAAAAEMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T06:10:44.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T06:10:44.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ListBook.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Book\\ListBook.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Book\\ListBook.cshtml",
@@ -195,12 +180,11 @@
               "RelativeToolTip": "PRN222\\Views\\Book\\ListBook.cshtml",
               "ViewState": "AQIAAF0AAAAAAAAAAAAAAI4AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-16T14:31:42.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T14:31:42.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "BookDetail.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Home\\BookDetail.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Home\\BookDetail.cshtml",
@@ -208,12 +192,11 @@
               "RelativeToolTip": "PRN222\\Views\\Home\\BookDetail.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T12:31:15.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:31:15.01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Author.cs",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Models\\Author.cs",
               "RelativeDocumentMoniker": "PRN222\\Models\\Author.cs",
@@ -221,12 +204,11 @@
               "RelativeToolTip": "PRN222\\Models\\Author.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T06:13:07.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T06:13:07.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ListUser.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Admin\\ListUser.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Admin\\ListUser.cshtml",
@@ -234,25 +216,36 @@
               "RelativeToolTip": "PRN222\\Views\\Admin\\ListUser.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAADUAAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-15T18:28:25.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T18:28:25.052Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "AdminHome.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Admin\\AdminHome.cshtml",
               "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
               "RelativeToolTip": "PRN222\\Views\\Admin\\AdminHome.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAADoAAABhAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADoAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-15T17:48:00.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
+              "Title": "UserDetail.cshtml",
+              "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\User\\UserDetail.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\User\\UserDetail.cshtml",
+              "ToolTip": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\User\\UserDetail.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\User\\UserDetail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T19:26:08.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AddBook.cshtml",
               "DocumentMoniker": "D:\\CODE\\PRN222\\PRN222\\PRN222\\Views\\Book\\AddBook.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Book\\AddBook.cshtml",
@@ -260,8 +253,7 @@
               "RelativeToolTip": "PRN222\\Views\\Book\\AddBook.cshtml",
               "ViewState": "AQIAAFoAAAAAAAAAAAAAAHoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-16T15:03:58.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T15:03:58.048Z"
             },
             {
               "$type": "Document",
@@ -285,8 +277,7 @@
               "RelativeToolTip": "PRN222\\Controllers\\AdminController.cs",
               "ViewState": "AQIAAHkAAAAAAAAAAADwv6EAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T18:25:45.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T18:25:45.113Z"
             },
             {
               "$type": "Document",
