@@ -4346,11 +4346,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\sum24\\Prn222\\PRN222\\PRN222\\PRN222.csproj",
+      "projectUniqueName": "E:\\PRN222\\PRN222\\PRN222\\PRN222.csproj",
       "projectName": "PRN222",
-      "projectPath": "C:\\sum24\\Prn222\\PRN222\\PRN222\\PRN222.csproj",
+      "projectPath": "E:\\PRN222\\PRN222\\PRN222\\PRN222.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\sum24\\Prn222\\PRN222\\PRN222\\obj\\",
+      "outputPath": "E:\\PRN222\\PRN222\\PRN222\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

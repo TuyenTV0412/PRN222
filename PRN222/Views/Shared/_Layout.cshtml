@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/style.css" />
     @RenderSection("Styles", required: false)  <!-- Đảm bảo rằng phần style được render ở đây -->
-
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-	<link href="~/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="~/css/elegant-icons.css" rel="stylesheet" />
-	<link href="~/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="~/css/jquery-ui.min.css" rel="stylesheet" />
-	<link href="~/css/nice-select.css" rel="stylesheet" />
-	<link href="~/css/owl.carousel.min.css" rel="stylesheet" />
-	<link href="~/css/site.css" rel="stylesheet" />
-	<link href="~/css/slicknav.min.css" rel="stylesheet" />
-	<link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
     <!-- Custom Styles -->
 </head>
 <body>
@@ -47,7 +46,7 @@
                                     <li><i class="fa fa-envelope"></i> Hãy đăng nhập để mượn sách</li>
                                     <li>Thư Viện</li>
                                 }
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -80,38 +79,45 @@
                 </div>
             </div>
         </div>
-        
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="header__logo">
-                            <a href="@Url.Action("Index", "Home")"><img src="img/logo.png" alt=""></a>
-                        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="@Url.Action("Index", "Home")"><img src="img/logo.png" alt=""></a>
                     </div>
+                </div>
                 @if (Context.Session.GetInt32("RoleId") != 3)
                 {
                     <div class="col-lg-6">
+                        <nav class="header__menu" style="margin-left: 165px">
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")">Sách</a></li>
+                                <li><a href="@Url.Action("Author", "Home")">Tác Giả</a></li>
+                                <li><a href="@Url.Action("Index", "Home")">Nhà Xuất Bản</a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="col-lg-3">
                         <div class="header__cart">
                             <ul>
                                 <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                             </ul>
-                          @*   <div class="header__cart__price">item: <span>$150.00</span></div> *@
+                            @*   <div class="header__cart__price">item: <span>$150.00</span></div> *@
                         </div>
                     </div>
                 }
             </div>
-                <div class="humberger__open">
-                    <i class="fa fa-bars"></i>
-                </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
             </div>
-        
+        </div>
+
     </header>
 
     <!-- Main Content Area -->
     <div class="full-width-container">
-        <main >
+        <main>
             @RenderBody()
         </main>
     </div>
@@ -188,20 +194,20 @@
     </footer>
     <!-- Footer Section End -->
     <!-- Bootstrap & jQuery -->
-@*     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @*     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> *@
 
-	<link href="d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml.css" rel="stylesheet" />
-	<a href="d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml">d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml</a>
-	<script src="~/js/bootstrap.min.js"></script>
-	<script src="~/js/jquery-3.3.1.min.js"></script>
-	<script src="~/js/jquery-ui.min.js"></script>
-	<script src="~/js/jquery.nice-select.min.js"></script>
-	<script src="~/js/jquery.slicknav.js"></script>
-	<script src="~/js/main.js"></script>
-	<script src="~/js/mixitup.min.js"></script>
-	<script src="~/js/owl.carousel.min.js"></script>
-	<script src="~/js/site.js"></script>
+    <link href="d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml.css" rel="stylesheet" />
+    <a href="d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml">d:\code\prn222\prn222\prn222\views\shared\_layout.cshtml</a>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/site.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

@@ -35,38 +35,59 @@
     </style>
 </head>
 <body>
-<section class="hero">
-    <div class="container">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-3">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span>Quản lý</span>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Nhân viên
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else if (Context.Session.GetInt32("RoleId") == 3) // Admin
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                                <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                                <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                                <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else // Người dùng thông thường
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                                @foreach (var category in categories)
+                                {
+                                    <li><a href="@Url.Action("Index", "Home", new { categoryId = category.CategoryId })">@category.CategoryName</a></li>
+                                }
+                            </ul>
+                        }
                     </div>
-                    @if (Context.Session.GetInt32("RoleId") == 2) // Kiểm tra RoleId của nhân viên
-                    {
-                        <ul>
-                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
-                            <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
-                            <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
-                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
-                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
-                        </ul>
-                    }
                 </div>
-            </div>
 
-            <!-- Main Content -->
-            <div class="col-lg-9">
-                <h2 style="margin-bottom: 20px">Cập nhật thông tin sách</h2>
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <h2 style="margin-bottom: 20px">Cập nhật thông tin sách</h2>
 
-                <!-- Form for updating book information -->
-                @if (Model != null)
-                {
+                    <!-- Form for updating book information -->
+                    @if (Model != null)
+                    {
                         <form asp-action="UpdateBookInfo" method="post">
-                        @Html.HiddenFor(model => model.BookId)
+                            @Html.HiddenFor(model => model.BookId)
 
 
                             <div class="form-group">
@@ -104,37 +125,45 @@
 
 
 
-                        <!-- Description -->
-                        <div class="form-group">
-                            <label asp-for="Description">Mô tả:</label>
-                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 4, cols = 50 })
-                        </div>
+                            <!-- Description -->
+                            <div class="form-group">
+                                <label asp-for="Description">Mô tả:</label>
+                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 4, cols = 50 })
+                            </div>
 
-                        <!-- Publishing Year -->
-                        <div class="form-group">
-                            <label asp-for="PublishingYear">Năm xuất bản:</label>
-                            @Html.TextBoxFor(model => model.PublishingYear, new { @class = "form-control", type = "number", id = "publishingYear" })
-                        </div>
+                            <!-- Publishing Year -->
+                            <div class="form-group">
+                                <label asp-for="PublishingYear">Năm xuất bản:</label>
+                                @Html.TextBoxFor(model => model.PublishingYear, new { @class = "form-control", type = "number", id = "publishingYear" })
+                            </div>
 
-                        <!-- Quantity -->
-                        <div class="form-group">
-                            <label asp-for="Quantity">Số lượng:</label>
-                            @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control", type = "number", id = "quantity" })
-                        </div>
+                            <!-- Quantity -->
+                            <div class="form-group">
+                                <label asp-for="Quantity">Số lượng:</label>
+                                @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control", type = "number", id = "quantity" })
+                            </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary">Cập nhật</button>
-                    </form>
-                }
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        </form>
+                    }
 
-                <!-- Back Button -->
-                <div style="float: right; margin-top: 10px;">
-                    <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                    <!-- Back Button -->
+                    <div style="float: right; margin-top: 10px;">
+                        @if (Context.Session.GetInt32("RoleId") == 3)
+                        {
+                            <a href="@Url.Action("ManageBooks", "Admin")" class="btn btn-secondary">Quay lại</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                        }
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 </body>

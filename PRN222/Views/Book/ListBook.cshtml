@@ -1,0 +1,176 @@
+﻿@model List<PRN222.Models.Book>
+@{
+    ViewData["Title"] = "Quản Lý Sách";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+
+    <!-- Custom CSS -->
+    <style>
+        /* Chỉnh kích thước tối đa của ảnh */
+        img {
+            max-width: 100px; /* Thiết lập chiều rộng tối đa */
+            max-height: 100px; /* Thiết lập chiều cao tối đa */
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+
+            .pagination a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid #ddd;
+                margin: 0 4px;
+            }
+
+                .pagination a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: 1px solid #4CAF50;
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                            <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                            <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <h3><strong>Quản Lý Sách</strong></h3>
+                    <div>
+                        <a href="@Url.Action("AddBook", "Admin")" class="btn btn-success">Thêm Sách Mới</a>
+                    </div>
+                    <h6>@ViewBag.Message</h6>
+                    <form method="post" action="@Url.Action("ManageBooks", "Admin")">
+                        <div class="mb-3 d-flex">
+                            <input required name="txt" class="form-control me-2" type="text" value="@ViewBag.SearchTerm" placeholder="Tìm kiếm theo tên sách">
+                            <button type="submit" class="btn btn-primary" style="font-size: 7px">Tìm kiếm</button>
+                        </div>
+                    </form>
+                    <div>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên Sách</th>
+                                    <th>Ảnh</th>
+                                    <th>Tác Giả</th>
+                                    <th>Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var book in Model)
+                                {
+                                    <tr>
+                                        <td>@book.BookId</td>
+                                        <td>@book.BookName</td>
+                                        <td><img src="@book.Images" alt="Sách"></td>
+                                        <td>@book.Author.AuthorName</td>
+                                        <td>
+                                            <a href="@Url.Action("Index", "BookDetail", new { id = book.BookId })">Chi tiết |</a>
+                                            <a href="@Url.Action("UpdateBookInfo", "BookDetail", new { bookID = book.BookId })">Cập nhật |</a>
+                                            <a href="@Url.Action("DeleteBook", "Admin", new { bookID = book.BookId })" onclick="return confirm('Bạn có chắc muốn xóa sách này?')">Xóa</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Phân trang -->
+                    <div class="clearfix">
+                        <ul class="pagination">
+                            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                            {
+                                <li class="@(i == ViewBag.CurrentPage ? "active" : "")">
+                                    <a href="@Url.Action("ManageBooks", "Admin", new { page = i })">@i</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

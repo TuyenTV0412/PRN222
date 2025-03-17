@@ -1,4 +1,4 @@
-﻿@model PRN222.Models.Book  
+﻿@model PRN222.Models.Book
 @{
     ViewData["Title"] = "Book Detail";
     var randomBooks = ViewBag.RandomBooks as List<PRN222.Models.Book>;
@@ -37,9 +37,9 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>All departments</span>
+                            <span>Quản lý</span>
                         </div>
-                        @if (Context.Session.GetInt32("RoleId") == 2) // Giả sử RoleId của "employee" là 1
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Nhân viên
                         {
                             <ul>
                                 <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
@@ -49,7 +49,18 @@
                                 <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
                             </ul>
                         }
-                        else
+                        else if (Context.Session.GetInt32("RoleId") == 3) // Admin
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                                <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                                <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                                <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else // Người dùng thông thường
                         {
                             <ul>
                                 <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
@@ -59,10 +70,9 @@
                                 }
                             </ul>
                         }
-
                     </div>
                 </div>
-                <div class="col-lg-9">                  
+                <div class="col-lg-9">
                     <!-- Featured Section Begin -->
                     <div class="row">
                         <aside class="col-sm-5 border-right">
@@ -87,7 +97,7 @@
                                     <dd>
                                         @if (Context.Session.GetInt32("UserId") != null)
                                         {
-                                            if (Context.Session.GetInt32("RoleId") == 2)
+                                            if (Context.Session.GetInt32("RoleId") != 1)
                                             {
                                                 <a href="@Url.Action("UpdateBookInfo", "BookDetail", new { bookID = Model.BookId })" class="btn btn-primary">Cập nhật thông tin sách</a>
                                             }
@@ -139,7 +149,7 @@
                     </section>
 
 
-                   
+
                 </div>
             </div>
         </div>

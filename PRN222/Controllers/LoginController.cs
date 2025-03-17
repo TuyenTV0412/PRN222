@@ -65,7 +65,15 @@ namespace PRN222.Controllers
             HttpContext.Session.SetString("Username", userRecord.Username);
             HttpContext.Session.SetInt32("RoleId", userRecord.RoleId);
 
-            return RedirectToAction("Index", "Home");
+
+            if (userRecord.RoleId == 3)
+            {
+                return View("~/Views/Admin/AdminHome.cshtml");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         // Xử lý logout
