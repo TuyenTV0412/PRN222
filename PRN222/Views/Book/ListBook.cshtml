@@ -140,7 +140,7 @@
                                     <tr>
                                         <td>@book.BookId</td>
                                         <td>@book.BookName</td>
-                                        <td><img src="@book.Images" alt="Sách"></td>
+                                        <td><img src="@Url.Content("~/img/Book/" + book.Images)" style="width: 100%; height: auto; border-radius: 10px;"></td>
                                         <td>@book.Author.AuthorName</td>
                                         <td>
                                             <a href="@Url.Action("Index", "BookDetail", new { id = book.BookId })">Chi tiết |</a>

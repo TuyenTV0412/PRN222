@@ -161,8 +161,17 @@ namespace PRN222.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddBook(Book newBook)
+        public async Task<IActionResult> AddBook(Book newBook, IFormFile imageFile)
         {
+            if (imageFile != null)
+            {
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img", "Book", imageFile.FileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+                newBook.Images = imageFile.FileName;
+            }
 
             try
             {
@@ -177,6 +186,9 @@ namespace PRN222.Controllers
                 return RedirectToAction("ManageBooks", "Admin");
             }
         }
+
+
+
 
 
 

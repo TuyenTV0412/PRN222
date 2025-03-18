@@ -82,16 +82,13 @@ namespace PRN222.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateBookInfo(Book updatedBook)
         {
-           
-            // Lấy thông tin sách từ database dựa trên BookId
             var book = await _prn222Context.Books.FirstOrDefaultAsync(b => b.BookId == updatedBook.BookId);
-
             if (book == null)
             {
                 return NotFound(); // Nếu không tìm thấy sách, trả về lỗi 404
             }
 
-            // Cập nhật thông tin sách
+            // Cập nhật các thông tin khác của sách
             book.BookName = updatedBook.BookName;
             book.AuthorId = updatedBook.AuthorId;
             book.CategoryId = updatedBook.CategoryId;
@@ -99,24 +96,30 @@ namespace PRN222.Controllers
             book.Description = updatedBook.Description;
             book.PublishingYear = updatedBook.PublishingYear;
             book.Quantity = updatedBook.Quantity;
-
+            if(updatedBook.Images != null)
+            {
+                book.Images = updatedBook.Images;
+            }
+            else
+            {
+                book.Images = book.Images;
+            }
+           
             try
             {
-                // Lưu thay đổi vào cơ sở dữ liệu
                 await _prn222Context.SaveChangesAsync();
                 TempData["SuccessMessage"] = "Cập nhật thông tin sách thành công!";
-                return RedirectToAction("Index", "BookDetail", new { id = updatedBook.BookId });
+                return RedirectToAction("ManageBooks", "Admin");
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", $"Không thể lưu thay đổi. Lỗi: {ex.Message}");
-                // Tải lại danh sách để hiển thị lại form
-                ViewBag.Categories = await _prn222Context.Categories.ToListAsync();
-                ViewBag.Author = await _prn222Context.Authors.ToListAsync();
-                ViewBag.Publisher = await _prn222Context.Publishers.ToListAsync();
-                return View(updatedBook);
+                TempData["ErrorMessage"] = $"Không thể cập nhật sách. Lỗi: {ex.Message}";
+                return RedirectToAction("ManageBooks", "Admin");
             }
         }
+
+
+
 
 
 

@@ -20,7 +20,7 @@ namespace PRN222.Controllers
         }
 
         // Hiển thị trang chủ với danh sách sách và danh mục
-        public async Task<IActionResult> Index(int? categoryId, string query)
+        public async Task<IActionResult> Index(int? categoryId, string query, int page = 1)
         {
             var categories = await _prn222Context.Categories.ToListAsync(); // Lấy danh sách category
 
@@ -30,30 +30,30 @@ namespace PRN222.Controllers
             if (!string.IsNullOrEmpty(query))
             {
                 books = await _prn222Context.Books
-                                             .Include(b => b.Author)
-                                             .Include(b => b.Category)
-                                             .Include(b => b.Publisher)
-                                             .Where(b => b.BookName.Contains(query)) // Tìm theo tên sách
-                                             .ToListAsync();
+                                     .Include(b => b.Author)
+                                     .Include(b => b.Category)
+                                     .Include(b => b.Publisher)
+                                     .Where(b => b.BookName.Contains(query)) // Tìm theo tên sách
+                                     .ToListAsync();
             }
             // Kiểm tra nếu có categoryId (tìm kiếm theo danh mục)
             else if (categoryId.HasValue)
             {
                 books = await _prn222Context.Books
-                                             .Include(b => b.Author)
-                                             .Include(b => b.Category)
-                                             .Include(b => b.Publisher)
-                                             .Where(b => b.CategoryId == categoryId) // Lọc theo danh mục
-                                             .ToListAsync();
+                                     .Include(b => b.Author)
+                                     .Include(b => b.Category)
+                                     .Include(b => b.Publisher)
+                                     .Where(b => b.CategoryId == categoryId) // Lọc theo danh mục
+                                     .ToListAsync();
             }
             // Nếu không có query và không có categoryId, lấy tất cả sách
             else
             {
                 books = await _prn222Context.Books
-                                             .Include(b => b.Author)
-                                             .Include(b => b.Category)
-                                             .Include(b => b.Publisher)
-                                             .ToListAsync();
+                                     .Include(b => b.Author)
+                                     .Include(b => b.Category)
+                                     .Include(b => b.Publisher)
+                                     .ToListAsync();
             }
 
             // Lấy 4 sách mới nhất
@@ -65,17 +65,25 @@ namespace PRN222.Controllers
                                                   .Take(4)
                                                   .ToListAsync();
             var author = await _prn222Context.Authors
-                                   .OrderByDescending(b => b.AuthorId) // Sắp xếp theo AuthorID từ mới nhất
-                                   .Take(4) // Lấy 4 tác giả mới nhất
-                                   .ToListAsync();
+                                           .OrderByDescending(b => b.AuthorId) // Sắp xếp theo AuthorID từ mới nhất
+                                           .Take(4) // Lấy 4 tác giả mới nhất
+                                           .ToListAsync();
 
+            var totalBooks = books.Count();
+            var pageSize = 8; // Số sách trên mỗi trang
+            var totalPages = (int)Math.Ceiling((double)totalBooks / pageSize);
+            var booksToShow = books.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentPage = page;
             ViewBag.Author = author; // Truyền dữ liệu tác giả vào ViewBag
             ViewBag.Categories = categories;
             ViewBag.NewestBooks = newestBooks;
             ViewBag.Query = query; // Truyền từ khóa tìm kiếm vào ViewBag
 
-            return View(books); // Trả về danh sách sách tìm được
+            return View(booksToShow); // Trả về danh sách sách tìm được
         }
+
 
         // Lọc sách theo danh mục
         public async Task<IActionResult> BooksByCategory(int categoryId)
@@ -93,12 +101,21 @@ namespace PRN222.Controllers
             return View("Index", books); // Render lại trang Index nhưng với dữ liệu lọc theo Category
         }
 
-        public async Task<IActionResult> Author()
+        public async Task<IActionResult> Author(int page = 1)
         {
             var authors = await _prn222Context.Authors.ToListAsync();
-            ViewBag.Authors = authors;
-            return View("~/Views/Home/Author.cshtml", authors);
+            var totalAuthors = authors.Count();
+            var pageSize = 8; // Số tác giả trên mỗi trang
+            var totalPages = (int)Math.Ceiling((double)totalAuthors / pageSize);
+            var authorsToShow = authors.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentPage = page;
+            ViewBag.Authors = authors; // Để hiển thị danh sách tác giả trong sidebar
+
+            return View("~/Views/Home/Author.cshtml", authorsToShow);
         }
+
 
 
     }

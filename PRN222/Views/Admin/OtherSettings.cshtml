@@ -62,7 +62,7 @@
                             <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
                             <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
                             <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
-                            <li><a href="@Url.Action("Logout", "User")">Đăng xuất</a></li>
+                            <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                        
 
                         <!-- Quản lý tác giả -->
-                        <a href="@Url.Action("ManageAuthors", "Admin")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
+                        <a href="@Url.Action("GetAllAuthor", "Admin")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
 
                         <!-- Quản lý thể loại -->
                         <a href="@Url.Action("ManageCategories", "Admin")" class="btn btn-success btn-settings">Quản Lý Thể Loại</a>

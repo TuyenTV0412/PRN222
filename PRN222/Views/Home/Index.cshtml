@@ -29,6 +29,35 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+
+            .pagination a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid #ddd;
+                margin: 0 4px;
+            }
+
+                .pagination a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: 1px solid #4CAF50;
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+    </style>
 </head>
 
 <body>
@@ -107,24 +136,32 @@
                 </div>
             @if (Model.Any())
             {
-                @foreach (var book in Model)
-                {
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix @book.Category.CategoryName.ToLower()">
-                        <div class="featured__item">
-                            <div class="featured__item__pic set-bg" data-setbg="@book.Images">
-                                <ul class="featured__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId })"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
+                    @foreach (var book in Model)
+                    {
+                        if (!string.IsNullOrEmpty(book.Images))
+                        {
+                            <div class="col-lg-3 col-md-4 col-sm-6 mix @book.Category.CategoryName.ToLower()">
+                                <div class="featured__item">
+                                    <div class="featured__item__pic">
+                                        <img src="@Url.Content("~/img/Book/" + book.Images)" alt="@book.BookName" style="width: 100%; height: auto; border-radius: 10px;">
+                                        <ul class="featured__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="featured__item__text">
+                                        <h6><a href="#">@book.BookName</a></h6> <!-- Tên sách -->
+                                        <p>by @book.Author.AuthorName</p> <!-- Tên tác giả -->
+                                    </div>
+                                </div>
                             </div>
-                            <div class="featured__item__text">
-                                <h6><a href="#">@book.BookName</a></h6> <!-- Tên sách -->
-                                <p>by @book.Author.AuthorName</p> <!-- Tên tác giả -->
-                            </div>
-                        </div>
-                    </div>
-                }
+                        }
+                    }
+
+
+
+
             }
             else
             {
@@ -135,6 +172,20 @@
                         </div>
                 </div>
             }
+                <!-- Thêm phân trang -->
+                <div class="clearfix">
+                    <ul class="pagination">
+                        
+                            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                            {
+                                <li class="@(i == ViewBag.CurrentPage ? "active" : "")">
+                                    <a href="@Url.Action("Index", "Home", new { page = i, categoryId = ViewBag.CategoryId, query = ViewBag.Query })">@i</a>
+                                </li>
+                            }
+                        
+                    </ul>
+                </div>
+
         </div>
     </div>
 </section>
@@ -154,22 +205,25 @@
             <div class="row">
                 @foreach (var book in newestBooks)
                 {
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix @book.Category.CategoryName.ToLower()">
-                        <div class="featured__item">
-                            <div class="featured__item__pic set-bg" data-setbg="@book.Images">
-                                <ul class="featured__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="featured__item__text">
-                                <h6><a href="#">@book.BookName</a></h6> <!-- Tên sách -->
-                                <p>by @book.Author.AuthorName</p> <!-- Tên tác giả -->
-                                @*    <h5>$@book.Price</h5> <!-- Giá sách (giả sử bạn có trường Price) --> *@
+                    if (!string.IsNullOrEmpty(book.Images))
+                    {
+                        <div class="col-lg-3 col-md-4 col-sm-6 mix @book.Category.CategoryName.ToLower()">
+                            <div class="featured__item">
+                                <div class="featured__item__pic">
+                                    <img src="@Url.Content("~/img/Book/" + book.Images)" alt="@book.BookName" style="width: 100%; height: auto; border-radius: 10px;">
+                                    <ul class="featured__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="featured__item__text">
+                                    <h6><a href="#">@book.BookName</a></h6> <!-- Tên sách -->
+                                    <p>by @book.Author.AuthorName</p> <!-- Tên tác giả -->
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
                 }
             </div>
         </div>
@@ -188,16 +242,23 @@
             <div class="row">
                 @foreach (var au in author)
                 {
+                    if (!string.IsNullOrEmpty(au.Image))
+                    {
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="featured__item">
-                            <div class="featured__item__pic set-bg" data-setbg="@au.Image">
-                            </div>
+                                <div class="featured__item__pic">
+                                    <img src="@Url.Content("~/img/Author/" + au.Image)" alt="@au.AuthorName" style="width: 100%; height: auto; border-radius: 10px;">
+                                    <ul class="featured__item__pic__hover">
+                                        <li><a href="@Url.Action("AuthorDetail", "Author", new { id = @au.AuthorId})"><i class="fa fa-retweet"></i></a></li>
+                                    </ul>
+                                </div>
                             <div class="featured__item__text">
                                 <h6><a href="#">@au.AuthorName</a></h6> 
                                 <p>Hometown: @au.Hometown</p> 
                             </div>
                         </div>
                     </div>
+                    }
                 }
             </div>
         </div>

@@ -79,11 +79,14 @@
                             <article class="gallery-wrap">
                                 <div class="img-big-wrap">
                                     <div>
-                                        <a href="#"><img src="@Model.Images" alt="Book Image"></a>
+                                        <a href="#">
+                                            <img src="@Url.Content("~/img/Book/" + Model.Images)" alt="@Model.BookName" style="width: 100%; height: auto;">
+                                        </a>
                                     </div>
                                 </div>
                             </article>
                         </aside>
+
 
                         <aside class="col-sm-7">
                             <article class="card-body p-5">
@@ -123,26 +126,27 @@
                     <section class="featured spad">
                         <div class="container">
                             <div class="row featured__filter">
-                                @foreach (var book in randomBooks) // Lặp qua sách liên quan
+                                @foreach (var book in randomBooks)
                                 {
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                        <div class="featured__item">
-                                            <div class="featured__item__pic set-bg" data-setbg="@book.Images">
-                                                <ul class="featured__item__pic__hover">
-                                                    <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId , category = book.CategoryId })"><i class="fa fa-retweet"></i></a></li>
-                                                    @* <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> *@
-                                                </ul>
-                                            </div>
-                                            <div class="featured__item__text">
-                                                <h6>
-                                                    <a href="#">
-                                                        @book.BookName
-                                                    </a>
-                                                </h6>
-                                                <h5 class="price">@book.Author.AuthorName</h5>
+                                    if (!string.IsNullOrEmpty(book.Images))
+                                    {
+                                        <div class="col-lg-3 col-md-4 col-sm-6 mix">
+                                            <div class="featured__item">
+                                                <div class="featured__item__pic">
+                                                    <img src="@Url.Content("~/img/Book/" + book.Images)" alt="@book.BookName" style="width: 100%; height: auto; border-radius: 10px;">
+                                                    <ul class="featured__item__pic__hover">
+                                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                        <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="featured__item__text">
+                                                    <h6><a href="#">@book.BookName</a></h6> <!-- Tên sách -->
+                                                    <p>by @book.Author.AuthorName</p> <!-- Tên tác giả -->
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    }
                                 }
                             </div>
                         </div>

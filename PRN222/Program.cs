@@ -57,6 +57,9 @@ app.UseAuthentication();  // Thêm dòng này để kích hoạt Authentication
 app.UseAuthorization();
 app.UseSession(); // Đảm bảo gọi UseSession sau UseRouting và trước UseAuthorization
 
+app.UseStaticFiles();
+
+
 // Cấu hình Session middleware
 app.UseSession(); // Đảm bảo gọi UseSession sau UseRouting và trước UseAuthorization
 

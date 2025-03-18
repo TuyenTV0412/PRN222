@@ -21,6 +21,34 @@
     <link href="~/css/style.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+
+            .pagination a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid #ddd;
+                margin: 0 4px;
+            }
+
+                .pagination a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: 1px solid #4CAF50;
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+    </style>
 </head>
 
 <body>
@@ -39,7 +67,7 @@
                             <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
                             @foreach (var author in ViewBag.Authors)
                             {
-                                <li><a href="@Url.Action("AuthorDetail", "Home", new { authorID = author.AuthorId })">@author.AuthorName</a></li>
+                                <li><a href="@Url.Action("AuthorDetail", "Author", new { id = author.AuthorId })">@author.AuthorName</a></li>
                             }
                         </ul>
                     </div>
@@ -63,7 +91,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="~/img/hero/banner.jpg">
+                    <div class="hero__item set-bg" data-setbg="@Url.Content("~/img/hero/banner.jpg")" ">
                         <div class="hero__text">
                             <span>FRUIT FRESH</span>
                             <h2>Vegetable <br />100% Organic</h2>
@@ -130,7 +158,11 @@
                 {
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="featured__item">
-                            <div class="featured__item__pic set-bg" data-setbg="@au.Image">
+                            <div class="featured__item__pic">
+                                <img src="@Url.Content("~/img/Author/" + au.Image)" alt="@au.AuthorName" style="width: 100%; height: auto; border-radius: 10px;">
+                                <ul class="featured__item__pic__hover">
+                                    <li><a href="@Url.Action("AuthorDetail", "Author", new { id = @au.AuthorId})"><i class="fa fa-retweet"></i></a></li>
+                                </ul>
                             </div>
                             <div class="featured__item__text">
                                 <h6><a href="#">@au.AuthorName</a></h6>
@@ -139,9 +171,26 @@
                         </div>
                     </div>
                 }
+                <div class="clearfix">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                        {
+                            <li class="@(i == ViewBag.CurrentPage ? "active" : "")">
+                                <a href="@Url.Action("Author", "Home", new { page = i })">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
+
+           
+
+       
+
     </section>
+    <!-- Thêm phân trang -->
+ 
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
