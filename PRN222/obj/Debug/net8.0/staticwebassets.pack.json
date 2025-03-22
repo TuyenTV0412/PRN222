@@ -125,12 +125,24 @@
       "PackagePath": "staticwebassets\\img\\Author\\ZigZiglar.jpg"
     },
     {
+      "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\du-lich-nha-trang.jpg",
+      "PackagePath": "staticwebassets\\img\\Author\\du-lich-nha-trang.jpg"
+    },
+    {
       "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\tohoai.jpg",
       "PackagePath": "staticwebassets\\img\\Author\\tohoai.jpg"
     },
     {
       "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\anna.jpg",
       "PackagePath": "staticwebassets\\img\\Book\\anna.jpg"
+    },
+    {
+      "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\book1.png",
+      "PackagePath": "staticwebassets\\img\\Book\\book1.png"
+    },
+    {
+      "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\checkoutss.jpg",
+      "PackagePath": "staticwebassets\\img\\Book\\checkoutss.jpg"
     },
     {
       "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\dacnhantam.jpg",
@@ -291,6 +303,10 @@
     {
       "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\hero\\banner.jpg",
       "PackagePath": "staticwebassets\\img\\hero\\banner.jpg"
+    },
+    {
+      "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\imagecard.jpg",
+      "PackagePath": "staticwebassets\\img\\imagecard.jpg"
     },
     {
       "Id": "E:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\language.png",

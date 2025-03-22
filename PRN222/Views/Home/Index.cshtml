@@ -121,6 +121,16 @@
                             <a href="#" class="primary-btn">SHOP NOW</a>
                         </div>
                     </div>
+
+                    @if (!string.IsNullOrEmpty(TempData["SuccessMessage"] as string))
+                    {
+                        <p id="errorMessage" style="color: red;">@Html.Raw(TempData["ErrorMessage"])</p>
+                        <script>
+                            setTimeout(function () {
+                                document.getElementById("errorMessage").style.display = "none";
+                            }, 5000); // Biến mất sau 5 giây
+                        </script>
+                    }
                 </div>
             </div>
         </div>
@@ -145,9 +155,8 @@
                                     <div class="featured__item__pic">
                                         <img src="@Url.Content("~/img/Book/" + book.Images)" alt="@book.BookName" style="width: 100%; height: auto; border-radius: 10px;">
                                         <ul class="featured__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                             <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="@Url.Action("Borrow", "BookDetail", new { bookID = book.BookId })"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="featured__item__text">
@@ -212,9 +221,8 @@
                                 <div class="featured__item__pic">
                                     <img src="@Url.Content("~/img/Book/" + book.Images)" alt="@book.BookName" style="width: 100%; height: auto; border-radius: 10px;">
                                     <ul class="featured__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="@Url.Action("Borrow", "BookDetail", new { bookID = book.BookId })"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="featured__item__text">

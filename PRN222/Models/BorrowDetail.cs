@@ -13,7 +13,11 @@ public partial class BorrowDetail
 
     public int Amount { get; set; }
 
+    public int? StatusId { get; set; }
+
     public virtual Book Book { get; set; } = null!;
 
     public virtual Borrow Borrow { get; set; } = null!;
+
+    public virtual Status? Status { get; set; }
 }

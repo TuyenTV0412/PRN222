@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Newtonsoft.Json
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -53,18 +54,18 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                @* <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a> *@
                             </div>
 
 
                             @if (username != null)
                             {
                                 <div class="header__top__right__social">
-                                    <a href="@Url.Action("Index", "Profile", new { id = userId })" style="margin-right: 10px; color: #007bff;"><i class="fa fa-cogs"></i> Manage</a>
-                                    <span>@username</span>
+                                    <a href="@Url.Action("HistoryBorrow", "Borrow", new { id = userId })" style="margin-right: 10px; color: #007bff;"><i class="fa fa-history"></i> Lịch Sử |</a>
+                                    <a href="@Url.Action("Index", "Profile", new { id = userId })" style="margin-right: 10px; color: #007bff;"><i class="fa fa-cogs"></i> Tài Khoản |</a>
                                     <a href="@Url.Action("Logout", "Login")" style="color: red;"><i class="fa fa-user"></i> Logout</a>
                                 </div>
                             }
@@ -101,7 +102,13 @@
                     <div class="col-lg-3">
                         <div class="header__cart">
                             <ul>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                <li>
+                                    <a href="@Url.Action("BorrowDetail", "BookDetail")">
+                                        <i class="fa fa-shopping-bag"></i>
+                                        <span>@(Context.Session.GetString("BorrowBooks") != null ? JsonConvert.DeserializeObject<List<PRN222.Models.Book>>(Context.Session.GetString("BorrowBooks")).Count : 0)</span>
+                                    </a>
+                                </li>
+
                             </ul>
                             @*   <div class="header__cart__price">item: <span>$150.00</span></div> *@
                         </div>

@@ -1,0 +1,180 @@
+﻿@model PRN222.DTO.CheckoutModel
+@{
+    ViewData["Title"] = "Phiếu Mượn";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <style>
+        .checkout__order {
+            background: #f5f5f5;
+            padding: 40px;
+            padding-top: 30px;
+            width: 40%;
+            border-radius: 20px;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #3399ff;
+            color: white;
+        }
+
+        .site-btn {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+            .site-btn:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-12">
+                    <section class="breadcrumb-section set-bg" style="margin-bottom: -30px; background-color:antiquewhite" src="/img/Book/checkoutss.jpg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <div class="breadcrumb__text">
+                                        <h2>Phiếu Mượn</h2>
+                                        <div class="breadcrumb__option">
+                                            <a href="@Url.Action("Index", "Home")">Home</a>
+                                            <span>Phiếu Mượn</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Checkout Section -->
+                    <section class="checkout spad">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Image Section -->
+                                <div class="col-lg-4">
+                                    <img style="border-radius: 20px;" src="/img/Book/book1.png" alt="">
+                                </div>
+
+                                <!-- Order Details -->
+                                <div class="checkout__order">
+                                    <h4 class="checkout__order-title">Phiếu Mượn</h4>
+                                    <p style="font-weight: bold;">
+                                        Mã Phiếu Mượn:
+                                        <input value="@Model.borrowId" name="borrowId" readonly />
+                                    </p>
+                                    <p style="font-weight: bold;">
+                                        Mã Thẻ:
+                                        <input value="@Model.CardId" name="cardId" readonly />
+                                    </p>
+
+                                    <!-- Borrow Form -->
+                                    @if (Model.BorrowBooks != null && Model.BorrowBooks.Any())
+                                    {
+                                        <form id="borrowForm" method="post" asp-controller="Checkout" asp-action="CheckoutBooks">
+
+                                            <!-- Table of Books -->
+                                            <table style="width: 100%;">
+                                                <tr>
+                                                    <th style="text-align: center;">Tên Sách</th>
+                                                    <th style="text-align: center;">Số lượng</th>
+                                                </tr>
+                                                @foreach (var book in Model.BorrowBooks)
+                                                {
+                                                    <tr>
+                                                        <!-- Hidden Inputs -->
+                                                        <input type="hidden" name="bookID[]" value="@book.BookId">
+                                                        <!-- Book Name -->
+                                                        <td>
+                                                            <input style="width: 317px;" type="text"
+                                                                   value="@book.BookName"
+                                                                   readonly />
+                                                        </td>
+                                                        <!-- Quantity -->
+                                                        <td style="text-align: center;">
+                                                            <input style="width: 72px; text-align: center;" type="text"
+                                                                   value="@book.Quantity"
+                                                                   readonly />
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </table>
+
+                                            <!-- Borrow Dates -->
+                                            <p style="font-weight: bold; margin-top: 20px;">
+                                                Ngày Mượn:
+                                                <input value="@Model.ValidFrom" name="validFrom" readonly />
+                                            </p>
+                                            <p style="font-weight: bold;">
+                                                Ngày Trả:
+                                                <input value="@Model.ValidThru" name="validThru" readonly />
+                                            </p>
+
+                                            <!-- Submit Button -->
+                                            <button type="submit" id="borrowButton"
+                                                    class="site-btn">
+                                                Mượn Ngay
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <!-- No Books Message -->
+                                        <p>Không có sách nào trong danh sách mượn.</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

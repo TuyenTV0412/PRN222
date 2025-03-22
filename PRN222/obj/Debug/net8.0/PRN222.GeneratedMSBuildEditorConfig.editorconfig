@@ -42,6 +42,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xVcGRhdGVCb29rSW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/PRN222/PRN222/PRN222/Views/Borrow/BorrowDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XEJvcnJvd0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PRN222/PRN222/PRN222/Views/Borrow/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XENoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PRN222/PRN222/PRN222/Views/Borrow/HistoryBorrow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XEhpc3RvcnlCb3Jyb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PRN222/PRN222/PRN222/Views/Cart/CreateCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDcmVhdGVDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PRN222/PRN222/PRN222/Views/Cart/loginCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxsb2dpbkNhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/PRN222/PRN222/PRN222/Views/Home/Author.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRob3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

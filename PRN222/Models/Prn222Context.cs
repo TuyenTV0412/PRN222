@@ -33,22 +33,25 @@ public partial class Prn222Context : DbContext
 
     public virtual DbSet<Role> Roles { get; set; }
 
+    public virtual DbSet<Status> Statuses { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-
         var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
-                                             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                                            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
         IConfiguration configuration = builder.Build();
         optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+
+
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.HasKey(e => e.AuthorId).HasName("PK__Author__70DAFC14E45D747C");
+            entity.HasKey(e => e.AuthorId).HasName("PK__Author__70DAFC141334A6E9");
 
             entity.ToTable("Author");
 
@@ -62,7 +65,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<Book>(entity =>
         {
-            entity.HasKey(e => e.BookId).HasName("PK__Book__3DE0C227B4DE4293");
+            entity.HasKey(e => e.BookId).HasName("PK__Book__3DE0C227998552C4");
 
             entity.ToTable("Book");
 
@@ -80,22 +83,22 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Author).WithMany(p => p.Books)
                 .HasForeignKey(d => d.AuthorId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Book__AuthorID__5AEE82B9");
+                .HasConstraintName("FK__Book__AuthorID__2F10007B");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Books)
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Book__CategoryID__5CD6CB2B");
+                .HasConstraintName("FK__Book__CategoryID__30F848ED");
 
             entity.HasOne(d => d.Publisher).WithMany(p => p.Books)
                 .HasForeignKey(d => d.PublisherId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Book__PublisherI__5BE2A6F2");
+                .HasConstraintName("FK__Book__PublisherI__300424B4");
         });
 
         modelBuilder.Entity<Borrow>(entity =>
         {
-            entity.HasKey(e => e.BorrowId).HasName("PK__Borrow__4295F85F42DC2960");
+            entity.HasKey(e => e.BorrowId).HasName("PK__Borrow__4295F85FD9F4CC6C");
 
             entity.ToTable("Borrow");
 
@@ -105,12 +108,12 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Person).WithMany(p => p.Borrows)
                 .HasForeignKey(d => d.PersonId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Borrow__PersonID__5DCAEF64");
+                .HasConstraintName("FK__Borrow__PersonID__33D4B598");
         });
 
         modelBuilder.Entity<BorrowDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__BorrowDe__3214EC07FA4E1FE3");
+            entity.HasKey(e => e.Id).HasName("PK__BorrowDe__3214EC07E51ECDCC");
 
             entity.ToTable("BorrowDetail");
 
@@ -120,17 +123,21 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Book).WithMany(p => p.BorrowDetails)
                 .HasForeignKey(d => d.BookId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__BorrowDet__BookI__5FB337D6");
+                .HasConstraintName("FK__BorrowDet__BookI__37A5467C");
 
             entity.HasOne(d => d.Borrow).WithMany(p => p.BorrowDetails)
                 .HasForeignKey(d => d.BorrowId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__BorrowDet__Borro__5EBF139D");
+                .HasConstraintName("FK__BorrowDet__Borro__36B12243");
+
+            entity.HasOne(d => d.Status).WithMany(p => p.BorrowDetails)
+                .HasForeignKey(d => d.StatusId)
+                .HasConstraintName("FK_BorrowDetail_Status");
         });
 
         modelBuilder.Entity<Card>(entity =>
         {
-            entity.HasKey(e => e.CardId).HasName("PK__Card__55FECD8EEF5678C9");
+            entity.HasKey(e => e.CardId).HasName("PK__Card__55FECD8EE55A3807");
 
             entity.ToTable("Card");
 
@@ -140,12 +147,12 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Person).WithMany(p => p.Cards)
                 .HasForeignKey(d => d.PersonId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Card__PersonID__60A75C0F");
+                .HasConstraintName("FK__Card__PersonID__3E52440B");
         });
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A2BFE8F1B09");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__19093A2B68906890");
 
             entity.ToTable("Category");
 
@@ -155,7 +162,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<Publisher>(entity =>
         {
-            entity.HasKey(e => e.PublisherId).HasName("PK__Publishe__4C657E4BB6727786");
+            entity.HasKey(e => e.PublisherId).HasName("PK__Publishe__4C657E4BD80D26A9");
 
             entity.ToTable("Publisher");
 
@@ -175,7 +182,7 @@ public partial class Prn222Context : DbContext
 
         modelBuilder.Entity<Punish>(entity =>
         {
-            entity.HasKey(e => e.PunishId).HasName("PK__Punish__7FB6D51289CC52CB");
+            entity.HasKey(e => e.PunishId).HasName("PK__Punish__7FB6D512E5E89852");
 
             entity.ToTable("Punish");
 
@@ -187,17 +194,17 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Book).WithMany(p => p.Punishes)
                 .HasForeignKey(d => d.BookId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Punish__BookID__619B8048");
+                .HasConstraintName("FK__Punish__BookID__3A81B327");
 
             entity.HasOne(d => d.Person).WithMany(p => p.Punishes)
                 .HasForeignKey(d => d.PersonId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Punish__PersonID__628FA481");
+                .HasConstraintName("FK__Punish__PersonID__3B75D760");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__8AFACE3A503ABF5B");
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__8AFACE3ACDC8E716");
 
             entity.ToTable("Role");
 
@@ -205,9 +212,18 @@ public partial class Prn222Context : DbContext
             entity.Property(e => e.RoleName).HasMaxLength(50);
         });
 
+        modelBuilder.Entity<Status>(entity =>
+        {
+            entity.HasKey(e => e.StatusId).HasName("PK__Status__C8EE20633C55E584");
+
+            entity.ToTable("Status");
+
+            entity.Property(e => e.StatusName).HasMaxLength(50);
+        });
+
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.PersonId).HasName("PK__Users__AA2FFB85675D06CC");
+            entity.HasKey(e => e.PersonId).HasName("PK__Users__AA2FFB8564BA2804");
 
             entity.Property(e => e.PersonId).HasColumnName("PersonID");
             entity.Property(e => e.Address).HasMaxLength(200);
@@ -228,7 +244,7 @@ public partial class Prn222Context : DbContext
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Users__RoleID__6383C8BA");
+                .HasConstraintName("FK__Users__RoleID__2A4B4B5E");
         });
 
         OnModelCreatingPartial(modelBuilder);

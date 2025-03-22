@@ -441,3 +441,4 @@ E:\PRN222\PRN222\PRN222\obj\Debug\net8.0\refint\PRN222.dll
 E:\PRN222\PRN222\PRN222\obj\Debug\net8.0\PRN222.pdb
 E:\PRN222\PRN222\PRN222\obj\Debug\net8.0\PRN222.genruntimeconfig.cache
 E:\PRN222\PRN222\PRN222\obj\Debug\net8.0\ref\PRN222.dll
+E:\PRN222\PRN222\PRN222\bin\Debug\net8.0\Newtonsoft.Json.dll

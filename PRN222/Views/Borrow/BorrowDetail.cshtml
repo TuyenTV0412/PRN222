@@ -1,0 +1,163 @@
+﻿@model List<PRN222.DTO.BookDto>
+@{
+    ViewData["Title"] = "Borrower's Slip";
+
+    // Lấy danh sách sách từ Session
+    var sessionBooks = Context.Session.GetString("BorrowBooks");
+    List<PRN222.DTO.BookDto> borrowBooks = string.IsNullOrEmpty(sessionBooks)
+        ? new List<PRN222.DTO.BookDto>()
+        : Newtonsoft.Json.JsonConvert.DeserializeObject<List<PRN222.DTO.BookDto>>(sessionBooks);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #3399ff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Danh mục</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9" style="margin-bottom: 20px">
+                    <h3><strong>Borrower's Slip</strong></h3>
+
+                    <!-- Form hiển thị danh sách sách trong session -->
+                    @if (borrowBooks != null && borrowBooks.Any())
+                    {
+                        <form asp-action="UpdateBorrowDetail" method="post">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Sách</th>
+                                        <th>Hình Ảnh</th>
+                                        <th>Tác Giả</th>
+                                        <th>Số Lượng</th>
+                                        <th style="text-align: center">Khác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var book in borrowBooks)
+                                    {
+                                        <tr>
+                                            <td>@book.BookName</td>
+                                            <td><img style="width: 69px; height: 100px" src="@Url.Content( "~/img/Book/" + book.Images)" alt="Book Image"></td>
+                                            <td>@book.AuthorName</td>
+                                            <td><input style="width: 50px" type="number" name="amount_@book.BookId" value="@book.Quantity" min="1" readonly></td>
+                                           @*  <td style="text-align: center"><button type="submit" class="btn btn-primary">Cập Nhật</button></td> *@
+                                            <td style="text-align: center">
+                                                <a href="@Url.Action("RemoveBookFromBorrow", "BookDetail", new { bookID = book.BookId })" class="btn btn-danger">Xóa</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </form>
+
+                        <!-- Form mượn thêm sách -->
+                        <!-- Thêm phần tử để hiển thị thông báo -->
+                       
+
+                        <!-- Form mượn thêm sách -->
+                        <form asp-action="GetInfoToCheckOut" method="get">
+                            @foreach (var book in borrowBooks)
+                            {
+                                <input type="hidden" name="bookID" value="@book.BookId">
+                            }
+                            <h5 style="margin-bottom: 10px">Bạn có muốn mượn thêm sách không?</h5>
+                            <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Mượn thêm</a>
+                            <button type="submit" class="btn btn-primary">Mượn ngay</button>
+                        </form>
+
+                        <!-- Hiển thị thông báo lỗi nếu có -->
+                        @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+                        {
+                            <p id="errorMessage" style="color: red;">@Html.Raw(TempData["ErrorMessage"])</p>
+                            <script>
+                                setTimeout(function () {
+                                    document.getElementById("errorMessage").style.display = "none";
+                                }, 5000); // Biến mất sau 5 giây
+                            </script>
+                        }
+
+
+
+                    }
+                    else
+                    {
+                        <p>Không có sách nào trong danh sách mượn.</p>
+                    }
+
+                    <!-- Nút quay lại -->
+                    <div style="float: right; margin-top: 20px;">
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Quay lại</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>

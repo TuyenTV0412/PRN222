@@ -52,7 +52,7 @@ namespace PRN222.Controllers
                     Email = model.Email,
                     Phone = model.Phone,
                     Username = model.Username,
-                    RoleId = 3,
+                    RoleId = 1,
                     StartDate = DateOnly.FromDateTime(DateTime.Now)
 
                 };
