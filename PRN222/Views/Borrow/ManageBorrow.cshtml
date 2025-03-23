@@ -1,0 +1,333 @@
+﻿@model dynamic
+@{
+    ViewData["Title"] = "Quản Lý Phiếu Mượn";
+    var borrowMap = ViewBag.BorrowMap as Dictionary<int, List<PRN222.Models.BorrowDetail>>;
+    var deadline = ViewBag.Deadline;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 700px;
+            margin: 50px auto;
+        }
+
+            .form-container h2 {
+                text-align: center;
+                color: #343a40;
+                margin-bottom: 20px;
+            }
+
+        .borrow-item {
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        .borrow-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .borrow-item-header p {
+                margin: 0;
+                font-size: 20px;
+                font-weight: bold;
+                color: #2980B9;
+                margin-bottom: 10px;
+            }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+            .actions button {
+                margin-left: 5px;
+            }
+
+        .borrow-item-header button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .borrow-item-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .borrow-item-detail p {
+                margin: 0;
+                flex: 1;
+            }
+
+            .borrow-item-detail .remove-item {
+                margin-left: 10px;
+            }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .borrow-item-detail hr {
+            width: 100%;
+            border: 0;
+            border-top: 1px solid #ced4da;
+            margin: 10px 0;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .search-form label {
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+            .search-form input[type="date"] {
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-right: 10px;
+                outline: none;
+            }
+
+            .search-form button {
+                padding: 8px 16px;
+                font-size: 14px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .search-form button:hover {
+                    background-color: #0056b3;
+                }
+
+        .header-card {
+            padding: 60px 20px;
+            background-image: url('~/img/borrow1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            height: 140px;
+            background-color : yellowgreen;
+        }
+
+            .header-card h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .header-card p {
+                font-size: 18px;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Danh mục</span>
+                        </div>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Nhân viên
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else if (Context.Session.GetInt32("RoleId") == 3) // Admin
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                                <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                                <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else // Người dùng thông thường
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                            </ul>
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <section class="header-card">
+                        <div class="header-card-text">
+                            <h2>Quản Lý Phiếu Mượn</h2>
+                            <p>Hãy theo dõi mỗi ngày để biết và cập nhật ngày trả sách</p>
+                        </div>
+                    </section>
+                    <div class="form-container">
+                        <h2>Quản Lý Phiếu Mượn</h2>
+                        <form method="get" asp-action="ManageBorrow" class="search-form">
+                            <label for="deadlineDate">Search by Deadline:</label>
+                            <input type="date" id="deadlineDate" name="deadlineDate" value="@ViewBag.Deadline?.ToString("yyyy-MM-dd")">
+                            <button type="submit">Search</button>
+                        </form>
+
+                        @if (borrowMap != null)
+                        {
+                            foreach (var entry in borrowMap)
+                            {
+                                <div class="borrow-item">
+                                    <div class="borrow-item-header">
+                                        <p>PersonID: @entry.Key</p>
+                                        <div class="actions">
+                                            <form method="post" asp-action="RemoveAllBorrows" onsubmit="return confirmDeleteAll();">
+                                                <input type="hidden" name="personId" value="@entry.Key">
+                                                <button type="submit" class="btn btn-danger btn-sm">Remove All</button>
+                                            </form>
+                                            <button class="toggle-details">&#9660;</button>
+                                        </div>
+                                    </div>
+                                    <div class="borrow-item-details" style="display: none;">
+                                        @{
+                                            var borrowGroups = entry.Value.GroupBy(b => b.BorrowId);
+                                        }
+
+                                        @foreach (var borrowGroup in borrowGroups)
+                                        {
+                                            <div class="borrow-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                                <p class="highlight">BorrowID: @borrowGroup.Key</p>
+                                                <div>
+                                                    <a href="@Url.Action("UpdateBorrow", "Borrow", new { borrowId = borrowGroup.Key })" class="btn btn-success btn-sm">Update</a>
+                                                    <form style="display: inline;" method="post" asp-action="RemoveBorrow" onsubmit="return confirmDeleteBorrow();">
+                                                        <input type="hidden" name="borrowId" value="@borrowGroup.Key">
+                                                        <button type="submit" class="btn btn-danger btn-sm">Remove Borrow</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            @foreach (var borrow in borrowGroup)
+                                            {
+                                                <div class="borrow-item-detail" style="margin-left: 20px; margin-bottom: 15px;">
+                                                    <div>
+                                                        <p>BookName: @borrow.Book.BookName</p>
+                                                        <p>Amount: @borrow.Amount</p>
+                                                        <p>BorrowDate: @borrow.Borrow.BorrowDate.ToString("dd-MM-yyyy")</p>
+                                                        <p>Deadline: @borrow.Borrow.Deadline.ToString("dd-MM-yyyy")</p>
+                                                        <p>ReturnDate: @(borrow.Borrow.ReturnDate.HasValue ? borrow.Borrow.ReturnDate.Value.ToString("dd-MM-yyyy") : "N/A")</p>
+                                                        <p>Status: @borrow.Status.StatusName</p>
+                                                        <p>_________________________________</p>
+                                                    </div>
+                                                </div>
+                                            }
+
+                                            <hr>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Hàm để hiển thị và ẩn chi tiết mượn
+        document.querySelectorAll('.toggle-details').forEach(button => {
+            button.addEventListener('click', () => {
+                const details = button.closest('.borrow-item').querySelector('.borrow-item-details');
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    button.innerHTML = '&#9650;';
+                } else {
+                    details.style.display = 'none';
+                    button.innerHTML = '&#9660;';
+                }
+            });
+        });
+
+        function confirmDeleteAll() {
+            return confirm("Are you sure you want to remove all items?");
+        }
+
+        function confirmDeleteBorrow() {
+            return confirm("Are you sure you want to remove this borrow record?");
+        }
+    </script>
+
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+﻿@model PRN222.Models.Borrow
+@{
+    ViewData["Title"] = "Cập Nhật Thông Tin Mượn Sách";
+    var statuses = ViewBag.Statuses as List<PRN222.Models.Status>;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Arial';
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+            .form-container h2 {
+                text-align: center;
+                color: #343a40;
+                margin-bottom: 20px;
+            }
+
+            .form-container label {
+                display: block;
+                margin-bottom: 8px;
+                color: #495057;
+                font-weight: 600;
+            }
+
+            .form-container input[type="text"],
+            .form-container input[type="email"],
+            .form-container input[type="number"],
+            .form-container input[type="date"],
+            .form-container select {
+                width: calc(100% - 22px);
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+
+            .form-container input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                border: none;
+                border-radius: 4px;
+                color: #ffffff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .form-container input[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+
+        .book-list {
+            margin-bottom: 20px;
+        }
+
+        .book-item {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        /* End of Custom CSS */
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Danh mục</span>
+                        </div>
+                        @if (Context.Session.GetInt32("RoleId") == 2) // Nhân viên
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                                <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                                <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else if (Context.Session.GetInt32("RoleId") == 3) // Admin
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                                <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                                <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                                <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                                <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                                <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                            </ul>
+                        }
+                        else // Người dùng thông thường
+                        {
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")"><strong>All</strong></a></li>
+                            </ul>
+                        }
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="form-container">
+                        <h2>Cập Nhật Thông Tin Mượn</h2>
+
+                        @if (TempData["ErrorMessage"] != null)
+                        {
+                            <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+                        }
+
+                        <form asp-action="UpdateBorrow" method="post">
+                            <input type="hidden" name="borrowId" value="@Model.BorrowId" />
+
+                            <label>Mã Phiếu Mượn:</label>
+                            <input type="text" value="@Model.BorrowId" readonly />
+
+                            <label>Ngày Mượn:</label>
+                            <input type="date" value="@Model.BorrowDate.ToString("yyyy-MM-dd")" readonly />
+
+                            <label>Hạn Trả:</label>
+                            <input type="date" value="@Model.Deadline.ToString("yyyy-MM-dd")" readonly />
+
+                            <label for="returnDate">Ngày Trả Thực Tế:</label>
+                            <input type="date" id="returnDate" name="returnDate" value="@(Model.ReturnDate?.ToString("yyyy-MM-dd"))" />
+
+                            <label for="statusId">Trạng Thái:</label>
+                            <select id="statusId" name="statusId">
+                                @foreach (var status in statuses)
+                                {
+                                    <option value="@status.StatusId"> @status.StatusName</option>
+
+                                }
+                            </select>
+
+                            <h4>Danh sách sách mượn:</h4>
+                            <div class="book-list">
+                                @foreach (var detail in Model.BorrowDetails)
+                                {
+                                    <div class="book-item">
+                                        <p><strong>Tên Sách:</strong> @detail.Book.BookName</p>
+                                        <p><strong>Số Lượng:</strong> @detail.Amount</p>
+                                    </div>
+                                }
+                            </div>
+
+                            <input type="submit" class="btn btn-success" value="Cập Nhật" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.getElementById('returnDate').addEventListener('change', function () {
+            var borrowDate = new Date('@Model.BorrowDate.ToString("yyyy-MM-dd")');
+            var returnDate = new Date(this.value);
+
+            // Clear the field if return date is earlier than borrow date
+            if (returnDate < borrowDate) {
+                alert('Ngày trả không được trước ngày mượn');
+                this.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

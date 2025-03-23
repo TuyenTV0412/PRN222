@@ -76,6 +76,7 @@ namespace PRN222.Controllers
 
                 await _context.SaveChangesAsync();
 
+                HttpContext.Session.Remove("BorrowBooks");
                 TempData["SuccessMessage"] = "Đã mượn sách thành công!";
                 return RedirectToAction("Index", "Home");
             }
