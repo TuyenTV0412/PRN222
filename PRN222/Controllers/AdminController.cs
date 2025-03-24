@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PRN222.DTO;
 using PRN222.Models;
 
 
@@ -187,7 +188,28 @@ namespace PRN222.Controllers
             }
         }
 
+        public async Task<IActionResult> Statistics()
+        {
+            var statistics = new StatisticsViewModel
+            {
+                TotalBooks = await _prn222Context.Books.CountAsync(),
+                TotalAuthors = await _prn222Context.Authors.CountAsync(),
+                TotalPublishers = await _prn222Context.Publishers.CountAsync(),
+                BorrowedBooks = await _prn222Context.BorrowDetails
+                    .Where(bd => bd.Status.StatusId == 1)
+                    .CountAsync(),
+                ReturnedBooks = await _prn222Context.BorrowDetails
+                    .Where(bd => bd.Status.StatusId == 2)
+                    .CountAsync(),
+                OverdueBooks = await _prn222Context.BorrowDetails
+                    .Where(bd => bd.Status.StatusId == 3)
+                    .CountAsync(),
+                TotalUsers = await _prn222Context.Users.CountAsync(),
+                TotalBorrows = await _prn222Context.Borrows.CountAsync()
+            };
 
+            return View(statistics);
+        }
 
 
 

@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title from-blog__title">
-                        <h2>Sách Mới Nhất</h2>
+                        <h2>Danh Sách</h2>
                     </div>
                 </div>
             </div>
@@ -89,9 +89,8 @@
                                 <div class="featured__item__pic">
                                     <img src="@Url.Content("~/img/Book/" + book.Images)" alt="@book.BookName" style="width: 100%; height: auto; border-radius: 10px;">
                                     <ul class="featured__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="@Url.Action("Index", "BookDetail", new { id = book.BookId})"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="@Url.Action("Borrow", "BookDetail", new { bookID = book.BookId })"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="featured__item__text">

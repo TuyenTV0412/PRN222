@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YmYSuRnwuvzU3lkDujNOh5n57/t6J72gnKtPPHw8XO0=",
+  "Hash": "gLKE0SAeYO1PJURdOL7tPVaYFOc+ddxQYkFvQcVmHhg=",
   "Source": "PRN222",
   "BasePath": "_content/PRN222",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PRN222\\wwwroot",
       "Source": "PRN222",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PRN222.styles.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PRN222.styles.css",
       "SourceId": "PRN222",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "PRN222.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PRN222.styles.css"
+      "OriginalItemSpec": "D:\\PRN222\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PRN222.styles.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PRN222.bundle.scp.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PRN222.bundle.scp.css",
       "SourceId": "PRN222",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "PRN222.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PRN222.bundle.scp.css"
+      "OriginalItemSpec": "D:\\PRN222\\PRN222\\PRN222\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PRN222.bundle.scp.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\elegant-icons.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\elegant-icons.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/elegant-icons.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\elegant-icons.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\font-awesome.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\font-awesome.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/font-awesome.min.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\jquery-ui.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\jquery-ui.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/jquery-ui.min.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\jquery-ui.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\nice-select.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\nice-select.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/nice-select.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\nice-select.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\owl.carousel.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\owl.carousel.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/owl.carousel.min.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\owl.carousel.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\site.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\site.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\slicknav.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\slicknav.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/slicknav.min.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\slicknav.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\css\\style.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\css\\style.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\favicon.ico",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\favicon.ico",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.eot",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.eot",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/ElegantIcons.eot",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\ElegantIcons.eot"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.svg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.svg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/ElegantIcons.svg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\ElegantIcons.svg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.ttf",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.ttf",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/ElegantIcons.ttf",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\ElegantIcons.ttf"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.woff",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\ElegantIcons.woff",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/ElegantIcons.woff",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\ElegantIcons.woff"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\FontAwesome.otf",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\FontAwesome.otf",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/FontAwesome.otf",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\FontAwesome.otf"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.eot",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/fontawesome-webfont.eot",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.svg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/fontawesome-webfont.svg",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.ttf",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/fontawesome-webfont.ttf",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.woff",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/fontawesome-webfont.woff",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\fonts\\fontawesome-webfont.woff2",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "fonts/fontawesome-webfont.woff2",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\adminn.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\adminn.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/adminn.jpg",
       "AssetKind": "All",
@@ -454,10 +454,29 @@
       "OriginalItemSpec": "wwwroot\\img\\adminn.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Author\\AoyamaGosho.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\Aothuhoai.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/Aothuhoai.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\Aothuhoai.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\AoyamaGosho.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Author/AoyamaGosho.jpg",
       "AssetKind": "All",
@@ -473,10 +492,29 @@
       "OriginalItemSpec": "wwwroot\\img\\Author\\AoyamaGosho.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Author\\du-lich-nha-trang.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\DaleCarnegie.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/DaleCarnegie.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\DaleCarnegie.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\du-lich-nha-trang.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Author/du-lich-nha-trang.jpg",
       "AssetKind": "All",
@@ -492,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Author\\du-lich-nha-trang.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Author\\FujikoFFujio.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\FujikoFFujio.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Author/FujikoFFujio.jpg",
       "AssetKind": "All",
@@ -511,10 +549,105 @@
       "OriginalItemSpec": "wwwroot\\img\\Author\\FujikoFFujio.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Author\\tohoai.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\J.K.Rowling.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/J.K.Rowling.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\J.K.Rowling.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\KenBlanchard.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/KenBlanchard.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\KenBlanchard.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\LewTolstoj.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/LewTolstoj.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\LewTolstoj.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\nguyen-manh-hung.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/nguyen-manh-hung.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\nguyen-manh-hung.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\ThomasErikson.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Author/ThomasErikson.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Author\\ThomasErikson.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\tohoai.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Author/tohoai.jpg",
       "AssetKind": "All",
@@ -530,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Author\\tohoai.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Author\\ZigZiglar.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Author\\ZigZiglar.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Author/ZigZiglar.jpg",
       "AssetKind": "All",
@@ -549,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Author\\ZigZiglar.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\banner\\banner-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\banner\\banner-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/banner/banner-1.jpg",
       "AssetKind": "All",
@@ -568,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\img\\banner\\banner-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\banner\\banner-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\banner\\banner-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/banner/banner-2.jpg",
       "AssetKind": "All",
@@ -587,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\img\\banner\\banner-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/blog-1.jpg",
       "AssetKind": "All",
@@ -606,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/blog-2.jpg",
       "AssetKind": "All",
@@ -625,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/blog-3.jpg",
       "AssetKind": "All",
@@ -644,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/blog-4.jpg",
       "AssetKind": "All",
@@ -663,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-5.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-5.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/blog-5.jpg",
       "AssetKind": "All",
@@ -682,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-5.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-6.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\blog-6.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/blog-6.jpg",
       "AssetKind": "All",
@@ -701,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-6.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\details\\details-author.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\details\\details-author.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/details/details-author.jpg",
       "AssetKind": "All",
@@ -720,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\details\\details-author.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\details\\details-hero.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\details\\details-hero.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/details/details-hero.jpg",
       "AssetKind": "All",
@@ -739,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\details\\details-hero.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\details\\details-pic.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\details\\details-pic.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/details/details-pic.jpg",
       "AssetKind": "All",
@@ -758,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\details\\details-pic.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\sidebar\\sr-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\sidebar\\sr-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/sidebar/sr-1.jpg",
       "AssetKind": "All",
@@ -777,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\sidebar\\sr-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\sidebar\\sr-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\sidebar\\sr-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/sidebar/sr-2.jpg",
       "AssetKind": "All",
@@ -796,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\sidebar\\sr-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\blog\\sidebar\\sr-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\blog\\sidebar\\sr-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/blog/sidebar/sr-3.jpg",
       "AssetKind": "All",
@@ -815,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\sidebar\\sr-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\anna.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\anna.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/anna.jpg",
       "AssetKind": "All",
@@ -834,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\anna.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\book1.png",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\book1.png",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/book1.png",
       "AssetKind": "All",
@@ -853,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\book1.png"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\checkoutss.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\checkoutss.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/checkoutss.jpg",
       "AssetKind": "All",
@@ -872,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\checkoutss.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\dacnhantam.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\dacnhantam.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/dacnhantam.jpg",
       "AssetKind": "All",
@@ -891,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\dacnhantam.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\demen.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\demen.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/demen.jpg",
       "AssetKind": "All",
@@ -910,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\demen.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\demen2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\demen2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/demen2.jpg",
       "AssetKind": "All",
@@ -929,10 +1062,67 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\demen2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\hihi.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\demen22.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Book/demen22.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Book\\demen22.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\doraemon.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Book/doraemon.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Book\\doraemon.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\harry.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Book/harry.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Book\\harry.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\hihi.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/hihi.jpg",
       "AssetKind": "All",
@@ -948,10 +1138,29 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\hihi.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\nguoimetot.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\nghethuatbanhangnguoidothai-88k-01-bia-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Book/nghethuatbanhangnguoidothai-88k-01-bia-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Book\\nghethuatbanhangnguoidothai-88k-01-bia-1.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\nguoimetot.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/nguoimetot.jpg",
       "AssetKind": "All",
@@ -967,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\nguoimetot.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\tamlyhocnhancach4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\tamlyhocnhancach4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/tamlyhocnhancach4.jpg",
       "AssetKind": "All",
@@ -986,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\tamlyhocnhancach4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\Book\\thuongmaidientu.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\thuongmaidientu.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/Book/thuongmaidientu.jpg",
       "AssetKind": "All",
@@ -1005,10 +1214,29 @@
       "OriginalItemSpec": "wwwroot\\img\\Book\\thuongmaidientu.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\breadcrumb.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\Book\\xachnuocbocam.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
+      "BasePath": "_content/PRN222",
+      "RelativePath": "img/Book/xachnuocbocam.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Book\\xachnuocbocam.jpg"
+    },
+    {
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\breadcrumb.jpg",
+      "SourceId": "PRN222",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/breadcrumb.jpg",
       "AssetKind": "All",
@@ -1024,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\img\\breadcrumb.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\cart\\cart-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\cart\\cart-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/cart/cart-1.jpg",
       "AssetKind": "All",
@@ -1043,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\img\\cart\\cart-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\cart\\cart-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\cart\\cart-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/cart/cart-2.jpg",
       "AssetKind": "All",
@@ -1062,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\img\\cart\\cart-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\cart\\cart-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\cart\\cart-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/cart/cart-3.jpg",
       "AssetKind": "All",
@@ -1081,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\img\\cart\\cart-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/categories/cat-1.jpg",
       "AssetKind": "All",
@@ -1100,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\img\\categories\\cat-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/categories/cat-2.jpg",
       "AssetKind": "All",
@@ -1119,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\img\\categories\\cat-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/categories/cat-3.jpg",
       "AssetKind": "All",
@@ -1138,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\img\\categories\\cat-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/categories/cat-4.jpg",
       "AssetKind": "All",
@@ -1157,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\img\\categories\\cat-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-5.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\categories\\cat-5.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/categories/cat-5.jpg",
       "AssetKind": "All",
@@ -1176,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\img\\categories\\cat-5.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-1.jpg",
       "AssetKind": "All",
@@ -1195,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-2.jpg",
       "AssetKind": "All",
@@ -1214,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-3.jpg",
       "AssetKind": "All",
@@ -1233,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-4.jpg",
       "AssetKind": "All",
@@ -1252,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-5.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-5.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-5.jpg",
       "AssetKind": "All",
@@ -1271,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-5.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-6.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-6.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-6.jpg",
       "AssetKind": "All",
@@ -1290,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-6.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-7.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-7.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-7.jpg",
       "AssetKind": "All",
@@ -1309,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-7.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-8.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\featured\\feature-8.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/featured/feature-8.jpg",
       "AssetKind": "All",
@@ -1328,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\img\\featured\\feature-8.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\hero\\banner.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\hero\\banner.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/hero/banner.jpg",
       "AssetKind": "All",
@@ -1347,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\img\\hero\\banner.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\imagecard.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\imagecard.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/imagecard.jpg",
       "AssetKind": "All",
@@ -1366,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\img\\imagecard.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\language.png",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\language.png",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/language.png",
       "AssetKind": "All",
@@ -1385,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\img\\language.png"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\latest-product\\lp-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\latest-product\\lp-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/latest-product/lp-1.jpg",
       "AssetKind": "All",
@@ -1404,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\img\\latest-product\\lp-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\latest-product\\lp-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\latest-product\\lp-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/latest-product/lp-2.jpg",
       "AssetKind": "All",
@@ -1423,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\img\\latest-product\\lp-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\latest-product\\lp-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\latest-product\\lp-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/latest-product/lp-3.jpg",
       "AssetKind": "All",
@@ -1442,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\img\\latest-product\\lp-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\logo.png",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\logo.png",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -1461,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\payment-item.png",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\payment-item.png",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/payment-item.png",
       "AssetKind": "All",
@@ -1480,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\img\\payment-item.png"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/product-details-1.jpg",
       "AssetKind": "All",
@@ -1499,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\product-details-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/product-details-2.jpg",
       "AssetKind": "All",
@@ -1518,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\product-details-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/product-details-3.jpg",
       "AssetKind": "All",
@@ -1537,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\product-details-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/product-details-4.jpg",
       "AssetKind": "All",
@@ -1556,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\product-details-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-5.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\product-details-5.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/product-details-5.jpg",
       "AssetKind": "All",
@@ -1575,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\product-details-5.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/thumb-1.jpg",
       "AssetKind": "All",
@@ -1594,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\thumb-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/thumb-2.jpg",
       "AssetKind": "All",
@@ -1613,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\thumb-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/thumb-3.jpg",
       "AssetKind": "All",
@@ -1632,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\thumb-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\details\\thumb-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/details/thumb-4.jpg",
       "AssetKind": "All",
@@ -1651,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\details\\thumb-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/discount/pd-1.jpg",
       "AssetKind": "All",
@@ -1670,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\discount\\pd-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/discount/pd-2.jpg",
       "AssetKind": "All",
@@ -1689,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\discount\\pd-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/discount/pd-3.jpg",
       "AssetKind": "All",
@@ -1708,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\discount\\pd-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/discount/pd-4.jpg",
       "AssetKind": "All",
@@ -1727,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\discount\\pd-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-5.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-5.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/discount/pd-5.jpg",
       "AssetKind": "All",
@@ -1746,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\discount\\pd-5.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-6.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\discount\\pd-6.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/discount/pd-6.jpg",
       "AssetKind": "All",
@@ -1765,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\discount\\pd-6.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-1.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-1.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-1.jpg",
       "AssetKind": "All",
@@ -1784,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-1.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-10.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-10.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-10.jpg",
       "AssetKind": "All",
@@ -1803,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-10.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-11.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-11.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-11.jpg",
       "AssetKind": "All",
@@ -1822,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-11.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-12.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-12.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-12.jpg",
       "AssetKind": "All",
@@ -1841,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-12.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-2.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-2.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-2.jpg",
       "AssetKind": "All",
@@ -1860,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-2.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-3.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-3.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-3.jpg",
       "AssetKind": "All",
@@ -1879,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-3.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-4.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-4.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-4.jpg",
       "AssetKind": "All",
@@ -1898,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-4.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-5.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-5.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-5.jpg",
       "AssetKind": "All",
@@ -1917,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-5.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-6.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-6.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-6.jpg",
       "AssetKind": "All",
@@ -1936,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-6.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-7.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-7.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-7.jpg",
       "AssetKind": "All",
@@ -1955,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-7.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-8.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-8.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-8.jpg",
       "AssetKind": "All",
@@ -1974,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-8.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\img\\product\\product-9.jpg",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\img\\product\\product-9.jpg",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "img/product/product-9.jpg",
       "AssetKind": "All",
@@ -1993,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\product-9.jpg"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\bootstrap.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2012,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\jquery.nice-select.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\jquery.nice-select.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/jquery.nice-select.min.js",
       "AssetKind": "All",
@@ -2031,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.nice-select.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\jquery.slicknav.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\jquery.slicknav.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/jquery.slicknav.js",
       "AssetKind": "All",
@@ -2050,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.slicknav.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\jquery-3.3.1.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/jquery-3.3.1.min.js",
       "AssetKind": "All",
@@ -2069,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-3.3.1.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\jquery-ui.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\jquery-ui.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/jquery-ui.min.js",
       "AssetKind": "All",
@@ -2088,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-ui.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\main.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\main.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/main.js",
       "AssetKind": "All",
@@ -2107,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\mixitup.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\mixitup.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/mixitup.min.js",
       "AssetKind": "All",
@@ -2126,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\js\\mixitup.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\owl.carousel.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\owl.carousel.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/owl.carousel.min.js",
       "AssetKind": "All",
@@ -2145,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\js\\owl.carousel.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\js\\site.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\js\\site.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -2164,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2183,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2202,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2221,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2240,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2259,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2278,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2297,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2316,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2335,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2354,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2373,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2392,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2411,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2430,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2449,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2468,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2487,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2506,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2525,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2544,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2563,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2582,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2601,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2620,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2639,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2658,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2677,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2696,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2715,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2734,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2753,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2772,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2791,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2810,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2829,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2848,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2867,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2886,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2905,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2924,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2943,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2962,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2981,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -3000,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -3019,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3038,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3057,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3076,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3095,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3114,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3133,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3152,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3171,10 +3399,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3190,10 +3418,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3209,10 +3437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3228,10 +3456,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -3247,10 +3475,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_base.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_base.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_base.scss",
       "AssetKind": "All",
@@ -3266,10 +3494,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_base.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_blog.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_blog.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_blog.scss",
       "AssetKind": "All",
@@ -3285,10 +3513,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_blog.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_blog-details.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_blog-details.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_blog-details.scss",
       "AssetKind": "All",
@@ -3304,10 +3532,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_blog-details.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_blog-sidebar.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_blog-sidebar.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_blog-sidebar.scss",
       "AssetKind": "All",
@@ -3323,10 +3551,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_blog-sidebar.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_breadcrumb.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_breadcrumb.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_breadcrumb.scss",
       "AssetKind": "All",
@@ -3342,10 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_breadcrumb.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_checkout.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_checkout.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_checkout.scss",
       "AssetKind": "All",
@@ -3361,10 +3589,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_checkout.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_contact.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_contact.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_contact.scss",
       "AssetKind": "All",
@@ -3380,10 +3608,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_contact.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_footer.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_footer.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_footer.scss",
       "AssetKind": "All",
@@ -3399,10 +3627,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_footer.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_header.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_header.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_header.scss",
       "AssetKind": "All",
@@ -3418,10 +3646,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_header.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_hero.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_hero.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_hero.scss",
       "AssetKind": "All",
@@ -3437,10 +3665,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_hero.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_home-page.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_home-page.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_home-page.scss",
       "AssetKind": "All",
@@ -3456,10 +3684,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_home-page.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_mixins.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_mixins.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_mixins.scss",
       "AssetKind": "All",
@@ -3475,10 +3703,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_mixins.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_responsive.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_responsive.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_responsive.scss",
       "AssetKind": "All",
@@ -3494,10 +3722,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_responsive.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_shop-details.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_shop-details.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_shop-details.scss",
       "AssetKind": "All",
@@ -3513,10 +3741,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_shop-details.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_shop-grid.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_shop-grid.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_shop-grid.scss",
       "AssetKind": "All",
@@ -3532,10 +3760,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_shop-grid.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_shoping-cart.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_shoping-cart.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_shoping-cart.scss",
       "AssetKind": "All",
@@ -3551,10 +3779,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_shoping-cart.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_sidebar.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_sidebar.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_sidebar.scss",
       "AssetKind": "All",
@@ -3570,10 +3798,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_sidebar.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\_variable.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\_variable.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/_variable.scss",
       "AssetKind": "All",
@@ -3589,10 +3817,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\_variable.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\sass\\style.scss",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\sass\\style.scss",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "sass/style.scss",
       "AssetKind": "All",
@@ -3608,10 +3836,10 @@
       "OriginalItemSpec": "wwwroot\\sass\\style.scss"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\bootstrap-4.4.1-dist.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\bootstrap-4.4.1-dist.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/bootstrap-4.4.1-dist.zip",
       "AssetKind": "All",
@@ -3627,10 +3855,10 @@
       "OriginalItemSpec": "wwwroot\\Source\\bootstrap-4.4.1-dist.zip"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\font-awesome-4.7.0.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\font-awesome-4.7.0.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/font-awesome-4.7.0.zip",
       "AssetKind": "All",
@@ -3646,10 +3874,10 @@
       "OriginalItemSpec": "wwwroot\\Source\\font-awesome-4.7.0.zip"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\jquery-nice-select-1.1.0.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\jquery-nice-select-1.1.0.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/jquery-nice-select-1.1.0.zip",
       "AssetKind": "All",
@@ -3665,10 +3893,10 @@
       "OriginalItemSpec": "wwwroot\\Source\\jquery-nice-select-1.1.0.zip"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\jquery-ui-1.12.1.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\jquery-ui-1.12.1.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/jquery-ui-1.12.1.zip",
       "AssetKind": "All",
@@ -3684,10 +3912,10 @@
       "OriginalItemSpec": "wwwroot\\Source\\jquery-ui-1.12.1.zip"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\OwlCarousel2-2.3.4.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\OwlCarousel2-2.3.4.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/OwlCarousel2-2.3.4.zip",
       "AssetKind": "All",
@@ -3703,10 +3931,10 @@
       "OriginalItemSpec": "wwwroot\\Source\\OwlCarousel2-2.3.4.zip"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\sass.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\sass.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/sass.zip",
       "AssetKind": "All",
@@ -3722,10 +3950,10 @@
       "OriginalItemSpec": "wwwroot\\Source\\sass.zip"
     },
     {
-      "Identity": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\Source\\SlickNav-master.zip",
+      "Identity": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\Source\\SlickNav-master.zip",
       "SourceId": "PRN222",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\sum24\\New folder (4)\\PRN222\\PRN222\\wwwroot\\",
+      "ContentRoot": "D:\\PRN222\\PRN222\\PRN222\\wwwroot\\",
       "BasePath": "_content/PRN222",
       "RelativePath": "Source/SlickNav-master.zip",
       "AssetKind": "All",

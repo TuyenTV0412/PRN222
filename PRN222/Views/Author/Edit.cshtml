@@ -82,6 +82,11 @@
                             <input asp-for="AuthorName" class="form-control" required />
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">Tên</label>
+                            <!-- Ô nhập file -->
+                            <input type="file" asp-for="Image" id="Images" class="form-control" />
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Quê Quán</label>
                             <input asp-for="Hometown" class="form-control" />
                         </div>
@@ -89,6 +94,7 @@
                             <label class="form-label">Ngày Sinh</label>
                             <input asp-for="DateOfBirth" type="date" class="form-control" />
                         </div>
+
                         <div class="mb-3">
                             <label class="form-label">Ngày Mất</label>
                             <input asp-for="DateOfDeath" type="date" class="form-control" />

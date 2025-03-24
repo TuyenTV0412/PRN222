@@ -1,0 +1,142 @@
+﻿@model PRN222.DTO.StatisticsViewModel;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thống Kê Thư Viện</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <style>
+        .stats-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .stats-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .stats-label {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                            <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                            <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                            <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <h3><strong>Thống Kê Thư Viện</strong></h3>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.TotalBooks</div>
+                                <div class="stats-label">Tổng số sách</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.TotalAuthors</div>
+                                <div class="stats-label">Tổng số tác giả</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.TotalPublishers</div>
+                                <div class="stats-label">Tổng số nhà xuất bản</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.BorrowedBooks</div>
+                                <div class="stats-label">Sách đang mượn</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.ReturnedBooks</div>
+                                <div class="stats-label">Sách đã trả</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.OverdueBooks</div>
+                                <div class="stats-label">Sách quá hạn</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.TotalUsers</div>
+                                <div class="stats-label">Tổng số người dùng</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="stats-card text-center">
+                                <div class="stats-number">@Model.TotalBorrows</div>
+                                <div class="stats-label">Tổng số lượt mượn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
