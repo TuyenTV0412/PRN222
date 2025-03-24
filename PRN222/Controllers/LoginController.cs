@@ -81,6 +81,7 @@ namespace PRN222.Controllers
         {
             HttpContext.Session.Remove("Username");
             HttpContext.Session.Remove("Email");
+            HttpContext.Session.Clear();
 
             Response.Cookies.Delete("cname");
             Response.Cookies.Delete("cpass");

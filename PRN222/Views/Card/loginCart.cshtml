@@ -1,0 +1,192 @@
+﻿@{
+    ViewData["Title"] = "Làm Thẻ Mượn Sách";
+    string error = TempData["ErrorMessage"] as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+            .form-container h2 {
+                text-align: center;
+                color: #343a40;
+                margin-bottom: 20px;
+                font-weight: 700;
+            }
+
+            .form-container label {
+                display: block;
+                margin-bottom: 8px;
+                color: #495057;
+                font-weight: 600;
+            }
+
+            .form-container input[type="text"],
+            .form-container input[type="password"] {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 20px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-size: 16px;
+                transition: border-color 0.3s;
+            }
+
+                .form-container input[type="text"]:focus,
+                .form-container input[type="password"]:focus {
+                    border-color: #80bdff;
+                    outline: none;
+                }
+
+            .form-container input[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                background-color: #007bff;
+                border: none;
+                border-radius: 4px;
+                color: #ffffff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .form-container input[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+
+            .form-container p {
+                text-align: center;
+                color: red;
+                font-style: initial;
+            }
+
+        .header-card {
+            padding: 60px 20px;
+            background-image: url('~/img/imagecard.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            height: 140px;
+        }
+
+            .header-card h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: black;
+            }
+
+            .header-card p {
+                font-size: 18px;
+            }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Danh mục</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
+                            <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
+                            <li><a href="@Url.Action("checkCard", "Card")">Tạo Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <!-- Header Card -->
+                    <section class="header-card">
+                        <div class="header-card-text">
+                            <h2>Làm Thẻ Mượn Sách</h2>
+                            <p>Làm thẻ để mượn sách dễ dàng và tiện lợi hơn</p>
+                        </div>
+                    </section>
+
+                    <!-- Form Container -->
+                    <div class="form-container">
+                        <h2>Tạo Thẻ</h2>
+                        <form asp-action="ProcessCreateCard" method="post">
+                            <label for="user">Tên đăng nhập:</label>
+                            <input type="text" id="user" name="user" required />
+                            <input type="submit" value="Tạo Thẻ" />
+                        </form>
+
+                        <!-- Hiển thị lỗi nếu có -->
+                        @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+                        {
+                            <p id="errorMessage" style="color: red;">@Html.Raw(TempData["ErrorMessage"])</p>
+                            <script>
+                                setTimeout(function () {
+                                    document.getElementById("errorMessage").style.display = "none";
+                                }, 5000); // Biến mất sau 5 giây
+                            </script>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

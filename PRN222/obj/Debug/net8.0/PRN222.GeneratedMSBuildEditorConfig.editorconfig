@@ -70,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XENoZWNrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PRN222/PRN222/PRN222/Views/Borrow/CreateBorrow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XENyZWF0ZUJvcnJvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN222/PRN222/PRN222/Views/Borrow/HistoryBorrow.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XEhpc3RvcnlCb3Jyb3cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,12 +86,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9ycm93XFVwZGF0ZUJvcnJvdy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN222/PRN222/PRN222/Views/Cart/CreateCard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDcmVhdGVDYXJkLmNzaHRtbA==
+[D:/PRN222/PRN222/PRN222/Views/Card/checkCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxjaGVja0NhcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN222/PRN222/PRN222/Views/Cart/loginCart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxsb2dpbkNhcnQuY3NodG1s
+[D:/PRN222/PRN222/PRN222/Views/Card/CreateCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxDcmVhdGVDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN222/PRN222/PRN222/Views/Card/loginCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxsb2dpbkNhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN222/PRN222/PRN222/Views/Category/Create.cshtml]

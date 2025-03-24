@@ -58,7 +58,13 @@
                                         <strong>ID:</strong> @Model.AuthorId<br />
                                         <strong>Tên tác giả:</strong> @Model.AuthorName<br />
                                         <strong>Quê quán:</strong> @Model.Hometown<br />
-                                        <strong>Ngày sinh:</strong> @Model.DateOfBirth?.ToString("dd/MM/yyyy")<br />
+                                        <strong>Năm sinh:</strong> @Model.DateOfBirth?.ToString("dd/MM/yyyy")<br />
+                                        @if (Model.DateOfDeath.HasValue)
+                                        {
+                                            <strong>Năm mất:</strong> @Model.DateOfDeath?.ToString("dd/MM/yyyy")
+
+                                            <br />
+                                        }
                                     </p>
                                 </div>
                             </div>

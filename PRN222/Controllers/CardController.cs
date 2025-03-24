@@ -14,7 +14,13 @@ namespace PRN222.Controllers
         }
         public IActionResult CreateCard()
         {
-            return View("~/Views/Cart/loginCart.cshtml");
+            return View("~/Views/Card/loginCart.cshtml");
+        }
+
+
+        public IActionResult checkCard()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -50,7 +56,7 @@ namespace PRN222.Controllers
             
             ViewBag.UserDetail = foundUser;
 
-            return View("~/Views/Cart/CreateCard.cshtml", foundUser); // Chuyển đến View hiển thị thông tin chi tiết của người dùng
+            return View("~/Views/Card/CreateCard.cshtml", foundUser); // Chuyển đến View hiển thị thông tin chi tiết của người dùng
         }
 
 
@@ -100,6 +106,118 @@ namespace PRN222.Controllers
             }
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> CheckCard(string CardId)
+        {
+            if (string.IsNullOrEmpty(CardId))
+            {
+                TempData["ErrorMessage"] = "Thẻ Không Tồn Tại";
+                return RedirectToAction("checkCard");
+            }
+
+            // Find the card in the database
+            var card = await _prn222Context.Cards.FirstOrDefaultAsync(c => c.CardId.ToString() == CardId);
+
+            if (card == null)
+            {
+                TempData["ErrorMessage"] = "Thẻ Không Tồn Tại";
+                return RedirectToAction("checkCard");
+            }
+
+            // Find the user associated with the card
+            var user = await _prn222Context.Users
+                .FirstOrDefaultAsync(u => u.PersonId == card.PersonId);
+
+            if (user == null)
+            {
+                TempData["ErrorMessage"] = "Không tìm thấy thông tin người dùng";
+                return RedirectToAction("checkCard");
+            }
+
+            // Get all available books
+            var books = await _prn222Context.Books.ToListAsync();
+
+            // Pass the user and books to the view
+            ViewBag.User = user;
+            ViewBag.Card = card;
+
+            return View("~/Views/Borrow/CreateBorrow.cshtml", books);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBorrow(int PersonId, List<int> bookid)
+        {
+            if (bookid == null || !bookid.Any())
+            {
+                TempData["ErrorMessage"] = "Vui lòng chọn ít nhất một cuốn sách";
+                return RedirectToAction("Index");
+            }
+
+            // Check book availability first
+            foreach (var bookId in bookid)
+            {
+                var book = await _prn222Context.Books.FindAsync(bookId);
+                if (book == null || book.Quantity <= 0)
+                {
+                    TempData["ErrorMessage"] = $"Sách '{book?.BookName ?? "Unknown"}' không đủ số lượng để mượn.";
+                    return RedirectToAction("CheckCard");
+                }
+            }
+
+            using (var transaction = await _prn222Context.Database.BeginTransactionAsync())
+            {
+                try
+                {
+                    // Create new borrow record (let the database generate the ID)
+                    var newBorrow = new Borrow
+                    {
+                        // Remove explicit BorrowId assignment
+                        PersonId = PersonId,
+                        BorrowDate = DateOnly.FromDateTime(DateTime.Now),
+                        Deadline = DateOnly.FromDateTime(DateTime.Now.AddDays(7))
+                    };
+
+                    await _prn222Context.Borrows.AddAsync(newBorrow);
+                    await _prn222Context.SaveChangesAsync();
+
+                    // Now newBorrow.BorrowId will have the database-generated value
+
+                    // Create borrow details and update book quantities
+                    foreach (var bookId in bookid)
+                    {
+                        var borrowDetail = new BorrowDetail
+                        {
+                            BorrowId = newBorrow.BorrowId,
+                            BookId = bookId,
+                            Amount = 1,
+                            StatusId = 1
+                        };
+
+                        await _prn222Context.BorrowDetails.AddAsync(borrowDetail);
+
+                        // Update book quantity
+                        var book = await _prn222Context.Books.FindAsync(bookId);
+                        book.Quantity -= 1;
+                        _prn222Context.Books.Update(book);
+                    }
+
+                    await _prn222Context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+
+                    TempData["ErrorMessage"] = "Đã tạo phiếu mượn thành công!";
+                    return RedirectToAction("ManageBorrow", "Borrow");
+                }
+                catch (DbUpdateException ex)
+                {
+                    await transaction.RollbackAsync();
+                    Console.WriteLine($"Error: {ex.InnerException?.Message}");
+                    TempData["ErrorMessage"] = "Đã xảy ra lỗi khi tạo phiếu mượn.";
+                    return RedirectToAction("CheckCard");
+                }
+            }
+        }
 
 
     }

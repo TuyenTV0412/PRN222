@@ -3,6 +3,7 @@
     ViewData["Title"] = "Quản Lý Phiếu Mượn";
     var borrowMap = ViewBag.BorrowMap as Dictionary<int, List<PRN222.Models.BorrowDetail>>;
     var deadline = ViewBag.Deadline;
+
 }
 
 <!DOCTYPE html>
@@ -197,7 +198,7 @@
                             <ul>
                                 <li><a href="@Url.Action("Index", "Home")"><strong>Home</strong></a></li>
                                 <li><a href="@Url.Action("CreateCard", "Card")">Làm Thẻ</a></li>
-                                @* <li><a href="@Url.Action("CreateBorrow", "Borrow")">Tạo Phiếu Mượn</a></li> *@
+                                <li><a href="@Url.Action("checkCard", "Card")">Tạo Phiếu Mượn</a></li>
                                 <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
                                 <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
                             </ul>
@@ -229,6 +230,15 @@
                         </div>
                     </section>
                     <div class="form-container">
+                        @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+                        {
+                            <p id="errorMessage" style="color: red;">@Html.Raw(TempData["ErrorMessage"])</p>
+                            <script>
+                                setTimeout(function () {
+                                    document.getElementById("errorMessage").style.display = "none";
+                                }, 5000); // Biến mất sau 5 giây
+                            </script>
+                        }
                         <h2>Quản Lý Phiếu Mượn</h2>
                         <form method="get" asp-action="ManageBorrow" class="search-form">
                             <label for="deadlineDate">Search by Deadline:</label>
@@ -279,7 +289,7 @@
                                                         <p>Deadline: @borrow.Borrow.Deadline.ToString("dd-MM-yyyy")</p>
                                                         <p>ReturnDate: @(borrow.Borrow.ReturnDate.HasValue ? borrow.Borrow.ReturnDate.Value.ToString("dd-MM-yyyy") : "N/A")</p>
                                                         <p>Status: @borrow.Status.StatusName</p>
-                                                        <p>_________________________________</p>
+                                                        <p>____________________________________________________________</p>
                                                     </div>
                                                 </div>
                                             }
