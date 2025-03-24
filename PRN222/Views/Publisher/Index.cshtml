@@ -1,0 +1,143 @@
+﻿@model IEnumerable<PRN222.Models.Publisher>
+
+
+
+
+@{
+    ViewData["Title"] = "Danh Sách Nhà Xuất Bản";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <style>
+        .settings-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+            .settings-container h3 {
+                margin-bottom: 30px;
+            }
+
+        .btn-settings {
+            width: 250px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý</span>
+                        </div>
+                        <ul>
+                            <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
+                            <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
+                            <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
+                            <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <h2>Danh Sách Nhà Xuất Bản</h2>
+                    <a asp-action="Create" class="btn btn-primary">Thêm Nhà Xuất Bản</a>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên Nhà Xuất Bản</th>
+                                <th>Địa Chỉ</th>
+                                <th>Website</th>
+                                <th>Email</th>
+                                <th>Số Điện Thoại</th>
+                                <th>Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.PublisherId</td>
+                                    <td>@item.PublisherName</td>
+                                    <td>@item.Address</td>
+                                    <td>@item.Website</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Phone</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a asp-action="Edit" asp-route-id="@item.PublisherId" class="btn btn-warning btn-sm w-100">Chỉnh Sửa</a>
+                                            <button class="btn btn-danger btn-sm w-100" onclick="deletePublisher(@item.PublisherId)">Xóa</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function deletePublisher(id) {
+            if (confirm("Bạn có chắc chắn muốn xóa nhà xuất bản này không?")) {
+                fetch(`/Publisher/Delete/${id}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert("Xóa thành công!");
+                            location.reload(); // Tải lại danh sách sau khi xóa
+                        } else {
+                            alert("Xóa thất bại!");
+                        }
+                    })
+                    .catch(error => console.error("Lỗi:", error));
+            }
+        }
+    </script>
+</body>
+</html>
+

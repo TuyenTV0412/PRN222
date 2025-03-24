@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Cài Đặt Khác";
+﻿@model PRN222.Models.Author
+
+@{
+    ViewData["Title"] = "Chi Tiết Tác Giả";
 }
 
 <!DOCTYPE html>
@@ -12,8 +14,6 @@
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-
-
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/elegant-icons.css" rel="stylesheet" />
     <link href="~/css/font-awesome.min.css" rel="stylesheet" />
@@ -23,29 +23,33 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="~/css/slicknav.min.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
+
     <!-- Custom CSS -->
     <style>
-        .settings-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .author-detail-container {
             margin-top: 50px;
         }
 
-            .settings-container h3 {
-                margin-bottom: 30px;
-            }
+        .author-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-        .btn-settings {
-            width: 250px;
-            margin-bottom: 15px;
-            font-size: 18px;
+        .card {
+            border-radius: 10px;
+        }
+
+        .description {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
             <div class="row">
@@ -59,7 +63,7 @@
                         <ul>
                             <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
                             <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
-                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
                             <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
                             <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
                             <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
@@ -68,22 +72,31 @@
                 </div>
 
                 <!-- Main Content -->
-                <div class="col-lg-9">
-                    <h3><strong>Cài Đặt Khác</strong></h3>
-                    <div class="settings-container">
+                <div class="col-lg-9 author-detail-container">
+                    <h3><strong>Chi Tiết Tác Giả</strong></h3>
+                    <div class="row">
+                        <!-- Hình ảnh tác giả -->
+                        <div class="col-lg-4">
+                            <img src="@Url.Content("~/img/Author/" + Model.Image)" alt="Tác giả" class="author-image">
+                        </div>
 
-                        <!-- Quản lý tác giả -->
-                        <a href="@Url.Action("Index", "Author")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
+                        <!-- Thông tin tác giả -->
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Model.AuthorName</h5>
+                                    <p class="card-text">
+                                        <strong>ID:</strong> @Model.AuthorId<br />
+                                        <strong>Tên tác giả:</strong> @Model.AuthorName<br />
+                                        <strong>Quê quán:</strong> @Model.Hometown<br />
+                                        <strong>Ngày sinh:</strong> @(Model.DateOfBirth?.ToString("dd/MM/yyyy") ?? "Không rõ")<br />
+                                    </p>
+                                    <hr>
 
-
-                        <!-- Quản lý thể loại -->
-                        <a href="@Url.Action("Index", "Category")" class="btn btn-success btn-settings">Quản Lý Thể Loại</a>
-
-                        <!-- Quản lý nhà xuất bản -->
-                        <a href="@Url.Action("Index", "Publisher")" class="btn btn-info btn-settings">Quản Lý Nhà Xuất Bản</a>
-
-                        <!-- Back Button -->
-                        
+                                </div>
+                                <a href="@Url.Action("Index")" class="btn btn-secondary">Quay Lại</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Cài Đặt Khác";
+﻿@model PRN222.Models.Publisher
+
+
+@{
+    ViewData["Title"] = "Chỉnh Sửa Nhà Xuất Bản";
 }
 
 <!DOCTYPE html>
@@ -59,7 +62,7 @@
                         <ul>
                             <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
                             <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
-                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
                             <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
                             <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
                             <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
@@ -69,22 +72,39 @@
 
                 <!-- Main Content -->
                 <div class="col-lg-9">
-                    <h3><strong>Cài Đặt Khác</strong></h3>
-                    <div class="settings-container">
+                    <h3>Chỉnh Sửa Nhà Xuất Bản</h3>
+                    <form asp-action="Edit">
+                        <input type="hidden" asp-for="PublisherId" />
 
-                        <!-- Quản lý tác giả -->
-                        <a href="@Url.Action("Index", "Author")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
+                        <div class="form-group">
+                            <label asp-for="PublisherName">Tên Nhà Xuất Bản</label>
+                            <input asp-for="PublisherName" class="form-control" />
+                            <span asp-validation-for="PublisherName" class="text-danger"></span>
+                        </div>
 
+                        <div class="form-group">
+                            <label asp-for="Address">Địa Chỉ</label>
+                            <input asp-for="Address" class="form-control" />
+                        </div>
 
-                        <!-- Quản lý thể loại -->
-                        <a href="@Url.Action("Index", "Category")" class="btn btn-success btn-settings">Quản Lý Thể Loại</a>
+                        <div class="form-group">
+                            <label asp-for="Website">Website</label>
+                            <input asp-for="Website" class="form-control" />
+                        </div>
 
-                        <!-- Quản lý nhà xuất bản -->
-                        <a href="@Url.Action("Index", "Publisher")" class="btn btn-info btn-settings">Quản Lý Nhà Xuất Bản</a>
+                        <div class="form-group">
+                            <label asp-for="Email">Email</label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
 
-                        <!-- Back Button -->
-                        
-                    </div>
+                        <div class="form-group">
+                            <label asp-for="Phone">Số Điện Thoại</label>
+                            <input asp-for="Phone" class="form-control" />
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Lưu</button>
+                        <a href="@Url.Action("Index")" class="btn btn-secondary">Hủy</a>
+                    </form>
                 </div>
             </div>
         </div>

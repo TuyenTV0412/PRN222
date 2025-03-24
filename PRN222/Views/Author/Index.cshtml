@@ -1,5 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Cài Đặt Khác";
+﻿@model IEnumerable<PRN222.Models.Author>
+
+
+@{
+    ViewData["Title"] = "Quản Lý Tác Giả";
 }
 
 <!DOCTYPE html>
@@ -59,7 +62,7 @@
                         <ul>
                             <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
                             <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
-                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
                             <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
                             <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
                             <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
@@ -69,22 +72,39 @@
 
                 <!-- Main Content -->
                 <div class="col-lg-9">
-                    <h3><strong>Cài Đặt Khác</strong></h3>
-                    <div class="settings-container">
+                    <h2>Danh Sách Tác Giả</h2>
+                    <a href="@Url.Action("Create", "Author")" class="btn btn-primary">Thêm Tác Giả</a>
 
-                        <!-- Quản lý tác giả -->
-                        <a href="@Url.Action("Index", "Author")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Quê Quán</th>
+                                <th>Ngày Sinh</th>
+                                <th>Ngày Mất</th>
+                                <th>Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var author in Model)
+                            {
+                                <tr>
+                                    <td>@author.AuthorId</td>
+                                    <td>@author.AuthorName</td>
+                                    <td>@author.Hometown</td>
+                                    <td>@author.DateOfBirth?.ToString("dd/MM/yyyy")</td>
+                                    <td>@author.DateOfDeath?.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <a href="@Url.Action("Detail", "Author", new { id = author.AuthorId })" class="btn btn-info">Chi Tiết</a>
 
-
-                        <!-- Quản lý thể loại -->
-                        <a href="@Url.Action("Index", "Category")" class="btn btn-success btn-settings">Quản Lý Thể Loại</a>
-
-                        <!-- Quản lý nhà xuất bản -->
-                        <a href="@Url.Action("Index", "Publisher")" class="btn btn-info btn-settings">Quản Lý Nhà Xuất Bản</a>
-
-                        <!-- Back Button -->
-                        
-                    </div>
+                                        <a href="@Url.Action("Edit", "Author", new { id = author.AuthorId })" class="btn btn-warning">Sửa</a>
+                                        <button class="btn btn-danger" onclick="deleteAuthor(@author.AuthorId)">Xóa</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -92,6 +112,22 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        function deleteAuthor(authorId) {
+            if (confirm("Bạn có chắc muốn xóa tác giả này?")) {
+                $.ajax({
+                    url: '/Author/Delete/' + authorId,
+                    type: 'POST',
+                    success: function () {
+                        alert("Xóa thành công!");
+                        location.reload(); // Load lại trang sau khi xóa
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra, vui lòng thử lại!");
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 </html>
