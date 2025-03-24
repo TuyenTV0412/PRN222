@@ -1,4 +1,7 @@
-﻿@{
+﻿@model PRN222.Models.Category
+
+
+@{
     ViewData["Title"] = "Cài Đặt Khác";
 }
 
@@ -59,7 +62,7 @@
                         <ul>
                             <li><a href="@Url.Action("GetAllUser", "Admin")">Quản Lý Người Dùng</a></li>
                             <li><a href="@Url.Action("ManageBooks", "Admin")">Quản Lý Sách</a></li>
-                            <li><a href="@Url.Action("ManageBorrow", "Borrow")">Quản Lý Phiếu Mượn</a></li>
+                            <li><a href="@Url.Action("ManageBorrows", "Admin")">Quản Lý Phiếu Mượn</a></li>
                             <li><a href="@Url.Action("Statistics", "Admin")">Thống Kê</a></li>
                             <li><a href="@Url.Action("OtherSettings", "Admin")">Khác</a></li>
                             <li><a href="@Url.Action("Logout", "Login")">Đăng xuất</a></li>
@@ -69,22 +72,17 @@
 
                 <!-- Main Content -->
                 <div class="col-lg-9">
-                    <h3><strong>Cài Đặt Khác</strong></h3>
-                    <div class="settings-container">
+                    <h3>Tạo Thể Loại</h3>
 
-                        <!-- Quản lý tác giả -->
-                        <a href="@Url.Action("Index", "Author")" class="btn btn-primary btn-settings">Quản Lý Tác Giả</a>
-
-
-                        <!-- Quản lý thể loại -->
-                        <a href="@Url.Action("Index", "Category")" class="btn btn-success btn-settings">Quản Lý Thể Loại</a>
-
-                        <!-- Quản lý nhà xuất bản -->
-                        <a href="@Url.Action("Index", "Publisher")" class="btn btn-info btn-settings">Quản Lý Nhà Xuất Bản</a>
-
-                        <!-- Back Button -->
-                        
-                    </div>
+                    <form asp-action="Create">
+                        <div class="form-group">
+                            <label class="form-label">Tên Thể Loại</label>
+                            <input asp-for="CategoryName" class="form-control" />
+                            <span asp-validation-for="CategoryName" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success">Lưu</button>
+                        <a href="@Url.Action("Index")" class="btn btn-secondary">Hủy</a>
+                    </form>
                 </div>
             </div>
         </div>
