@@ -67,6 +67,7 @@ namespace PRN222.Controllers
                 .ToDictionary(g => g.Key, g => g.ToList());
 
             ViewBag.BorrowMap = borrowMap;
+            ViewBag.PersonIds = borrowMap.Keys.ToList();
 
             return View();
         }
@@ -197,64 +198,91 @@ namespace PRN222.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendBorrowEmails()
+        [HttpPost]
+        public async Task<IActionResult> SendBorrowEmails([FromForm] List<int> personIds)
         {
-            var borrowRecords = _context.Borrows
-                .Include(b => b.Person)
-                .Include(b => b.BorrowDetails)
-                    .ThenInclude(bd => bd.Book) // Lấy thông tin sách
-                .ToList();
-
-            if (!borrowRecords.Any())
+            if (personIds == null || !personIds.Any())
             {
-                TempData["ErrorMessage"] = "Không có dữ liệu mượn sách để gửi email.";
+                TempData["ErrorMessage"] = "Không có PersonID nào hợp lệ để gửi email.";
                 return RedirectToAction("ManageBorrow");
             }
 
-            // Nhóm danh sách theo PersonID
-            var groupedBorrows = borrowRecords.GroupBy(b => b.PersonId);
+            var borrowRecords = _context.Borrows
+                .Include(b => b.Person)
+                .Include(b => b.BorrowDetails)
+                    .ThenInclude(bd => bd.Book)
+                .Where(b => personIds.Contains(b.PersonId)) // Chỉ lấy dữ liệu của PersonId được search
+                .ToList();
 
-            foreach (var group in groupedBorrows)
+            foreach (var personId in personIds)
             {
-                var person = group.First().Person; // Lấy thông tin người dùng
-                if (string.IsNullOrEmpty(person.Email))
+                var personBorrows = borrowRecords.Where(b => b.PersonId == personId).ToList();
+                var person = personBorrows.FirstOrDefault()?.Person;
+
+                if (person == null || string.IsNullOrEmpty(person.Email))
                 {
                     continue; // Bỏ qua nếu không có email
                 }
 
-                // Tạo nội dung email
                 var emailContent = new StringBuilder();
-                emailContent.AppendLine($"<h3>Thông tin mượn sách của {person.Name}</h3>");
-                emailContent.AppendLine("<ul>");
 
-                foreach (var borrow in group)
+                // Thêm logo vào email
+                emailContent.AppendLine($@"
+            <div style='text-align:center; margin-bottom:20px;'>
+                <img src='https://yourwebsite.com/logo.png' alt='Library Logo' style='width:150px;'>
+            </div>");
+
+                emailContent.AppendLine($"<h2 style='color:#2c3e50;'>📚 Thông tin mượn sách của {person.Name}</h2>");
+                emailContent.AppendLine("<p>Xin chào, vui lòng kiểm tra thông tin mượn sách của bạn và trả sách trước hạn để tránh phí trễ hạn.</p>");
+
+                foreach (var borrow in personBorrows)
                 {
-                    emailContent.AppendLine($"<h4>Phiếu mượn ID: {borrow.BorrowId}</h4>");
-                    emailContent.AppendLine($"<strong>Ngày mượn:</strong> {borrow.BorrowDate:dd-MM-yyyy} <br>");
-                    emailContent.AppendLine($"<strong>Hạn trả:</strong> {borrow.Deadline:dd-MM-yyyy} <br>");
-                    emailContent.AppendLine($"<strong>Ngày trả:</strong> {(borrow.ReturnDate.HasValue ? borrow.ReturnDate.Value.ToString("dd-MM-yyyy") : "Chưa trả")} <br>");
-                    emailContent.AppendLine("<strong>Danh sách sách mượn:</strong><br><ul>");
+                    emailContent.AppendLine($"<h3 style='color:#16a085;'>Phiếu mượn ID: {borrow.BorrowId}</h3>");
+                    emailContent.AppendLine($"<p><strong>📅 Ngày mượn:</strong> {borrow.BorrowDate:dd-MM-yyyy}</p>");
+                    emailContent.AppendLine($"<p><strong>⏳ Hạn trả:</strong> {borrow.Deadline:dd-MM-yyyy}</p>");
+                    emailContent.AppendLine($"<p><strong>🔄 Ngày trả:</strong> {(borrow.ReturnDate.HasValue ? borrow.ReturnDate.Value.ToString("dd-MM-yyyy") : "Chưa trả")}</p>");
+
+                    // Bảng danh sách sách mượn
+                    emailContent.AppendLine(@"
+                <table style='width:100%; border-collapse: collapse; margin-top:10px;'>
+                    <thead>
+                        <tr style='background:#16a085; color:#fff;'>
+                            <th style='padding:10px; border:1px solid #ddd;'>📖 Tên sách</th>
+                            <th style='padding:10px; border:1px solid #ddd;'>📦 Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody>");
 
                     foreach (var detail in borrow.BorrowDetails)
                     {
-                        emailContent.AppendLine("<li>");
-                        emailContent.AppendLine($"<strong>Tên sách:</strong> {detail.Book.BookName} <br>");
-                        emailContent.AppendLine($"<strong>Số lượng:</strong> {detail.Amount} <br>");
-                        emailContent.AppendLine("</li>");
+                        emailContent.AppendLine($@"
+                    <tr>
+                        <td style='padding:10px; border:1px solid #ddd;'>{detail.Book.BookName}</td>
+                        <td style='padding:10px; border:1px solid #ddd; text-align:center;'>{detail.Amount}</td>
+                    </tr>");
                     }
 
-                    emailContent.AppendLine("</ul><hr>");
+                    emailContent.AppendLine("</tbody></table>");
+                    emailContent.AppendLine("<hr>");
                 }
 
-                emailContent.AppendLine("</ul>");
+                // Lời nhắc trả sách
+                emailContent.AppendLine(@"
+            <p style='color:red; font-weight:bold;'>⚠️ Lưu ý: Vui lòng trả sách trước hạn để tránh phí trễ hạn!</p>
+            <p>📍 Địa chỉ thư viện: Thư Viện Sách, Hòa Lạc</p>
+            <p>📞 Liên hệ: 0867699058</p>
+            <p>📩 Email hỗ trợ: support@yourlibrary.com</p>
+            <br>
+            <p style='text-align:center;'>❤️ Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>");
 
-                // Gửi email
-                await SendEmail(person.Email, "Thông tin phiếu mượn của bạn", emailContent.ToString());
+                await SendEmail(person.Email, "📚 Nhắc nhở trả sách thư viện", emailContent.ToString());
             }
 
             TempData["SuccessMessage"] = "Email đã được gửi thành công.";
             return RedirectToAction("ManageBorrow");
         }
+
+
 
         private async Task SendEmail(string toEmail, string subject, string body)
         {

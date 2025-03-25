@@ -246,6 +246,10 @@
                             <button type="submit">Search</button>
                         </form>
                         <form method="post" asp-action="SendBorrowEmails">
+                            @foreach (var personId in ViewBag.PersonIds)
+                            {
+                                <input type="hidden" name="personIds" value="@personId" />
+                            }
                             <button type="submit" class="btn btn-primary">Gửi Email Tất Cả</button>
                         </form>
 
@@ -331,6 +335,8 @@
         function confirmDeleteBorrow() {
             return confirm("Are you sure you want to remove this borrow record?");
         }
+
+
     </script>
 
     <!-- Js Plugins -->
