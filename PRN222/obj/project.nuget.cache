@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hve6bRr2HCC/yRsgLBcclzZWwFWmfH55gH787YmeEJLCO0oDNcZDVW6SxW7/zhzrDVB5QxsaXAk+wrB9VrkotQ==",
+  "dgSpecHash": "mcVNhuYRw2DSbgsnQrBIAbafrUtlgpOqaxJd5Hk2mPRuW3UcsicCTm9N/79TVlwFS81g94iEJ03n48SIeha9fA==",
   "success": true,
-  "projectFilePath": "D:\\PRN222\\PRN222\\PRN222\\PRN222.csproj",
+  "projectFilePath": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\PRN222.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

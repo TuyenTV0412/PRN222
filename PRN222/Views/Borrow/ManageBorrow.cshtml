@@ -245,6 +245,9 @@
                             <input type="date" id="deadlineDate" name="deadlineDate" value="@ViewBag.Deadline?.ToString("yyyy-MM-dd")">
                             <button type="submit">Search</button>
                         </form>
+                        <form method="post" asp-action="SendBorrowEmails">
+                            <button type="submit" class="btn btn-primary">Gửi Email Tất Cả</button>
+                        </form>
 
                         @if (borrowMap != null)
                         {

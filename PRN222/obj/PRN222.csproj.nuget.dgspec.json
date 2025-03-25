@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN222\\PRN222\\PRN222\\PRN222.csproj": {}
+    "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\PRN222.csproj": {}
   },
   "projects": {
-    "D:\\PRN222\\PRN222\\PRN222\\PRN222.csproj": {
+    "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\PRN222.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN222\\PRN222\\PRN222\\PRN222.csproj",
+        "projectUniqueName": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\PRN222.csproj",
         "projectName": "PRN222",
-        "projectPath": "D:\\PRN222\\PRN222\\PRN222\\PRN222.csproj",
+        "projectPath": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\PRN222.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN222\\PRN222\\PRN222\\obj\\",
+        "outputPath": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

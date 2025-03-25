@@ -1,15 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PRN222.Models;
+using System.Net.Mail;
+using System.Net;
+using System.Text;
+
 
 namespace PRN222.Controllers
 {
     public class BorrowController : Controller
     {
+        private readonly IConfiguration _config;
         private readonly Prn222Context _context;
 
-        public BorrowController(Prn222Context context)
+        public BorrowController(IConfiguration config,Prn222Context context)
         {
+            _config = config;
             _context = context;
         }
 
@@ -190,6 +196,88 @@ namespace PRN222.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SendBorrowEmails()
+        {
+            var borrowRecords = _context.Borrows
+                .Include(b => b.Person)
+                .Include(b => b.BorrowDetails)
+                    .ThenInclude(bd => bd.Book) // Lấy thông tin sách
+                .ToList();
+
+            if (!borrowRecords.Any())
+            {
+                TempData["ErrorMessage"] = "Không có dữ liệu mượn sách để gửi email.";
+                return RedirectToAction("ManageBorrow");
+            }
+
+            // Nhóm danh sách theo PersonID
+            var groupedBorrows = borrowRecords.GroupBy(b => b.PersonId);
+
+            foreach (var group in groupedBorrows)
+            {
+                var person = group.First().Person; // Lấy thông tin người dùng
+                if (string.IsNullOrEmpty(person.Email))
+                {
+                    continue; // Bỏ qua nếu không có email
+                }
+
+                // Tạo nội dung email
+                var emailContent = new StringBuilder();
+                emailContent.AppendLine($"<h3>Thông tin mượn sách của {person.Name}</h3>");
+                emailContent.AppendLine("<ul>");
+
+                foreach (var borrow in group)
+                {
+                    emailContent.AppendLine($"<h4>Phiếu mượn ID: {borrow.BorrowId}</h4>");
+                    emailContent.AppendLine($"<strong>Ngày mượn:</strong> {borrow.BorrowDate:dd-MM-yyyy} <br>");
+                    emailContent.AppendLine($"<strong>Hạn trả:</strong> {borrow.Deadline:dd-MM-yyyy} <br>");
+                    emailContent.AppendLine($"<strong>Ngày trả:</strong> {(borrow.ReturnDate.HasValue ? borrow.ReturnDate.Value.ToString("dd-MM-yyyy") : "Chưa trả")} <br>");
+                    emailContent.AppendLine("<strong>Danh sách sách mượn:</strong><br><ul>");
+
+                    foreach (var detail in borrow.BorrowDetails)
+                    {
+                        emailContent.AppendLine("<li>");
+                        emailContent.AppendLine($"<strong>Tên sách:</strong> {detail.Book.BookName} <br>");
+                        emailContent.AppendLine($"<strong>Số lượng:</strong> {detail.Amount} <br>");
+                        emailContent.AppendLine("</li>");
+                    }
+
+                    emailContent.AppendLine("</ul><hr>");
+                }
+
+                emailContent.AppendLine("</ul>");
+
+                // Gửi email
+                await SendEmail(person.Email, "Thông tin phiếu mượn của bạn", emailContent.ToString());
+            }
+
+            TempData["SuccessMessage"] = "Email đã được gửi thành công.";
+            return RedirectToAction("ManageBorrow");
+        }
+
+        private async Task SendEmail(string toEmail, string subject, string body)
+        {
+            var smtpClient = new SmtpClient(_config["EmailSettings:SmtpServer"])
+            {
+                Port = int.Parse(_config["EmailSettings:Port"]),
+                Credentials = new NetworkCredential(
+                    _config["EmailSettings:Username"],
+                    _config["EmailSettings:Password"]),
+                EnableSsl = true
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(_config["EmailSettings:Username"]),
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true
+            };
+
+            mailMessage.To.Add(toEmail);
+            await smtpClient.SendMailAsync(mailMessage);
+        }
 
 
     }
