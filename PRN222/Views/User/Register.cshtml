@@ -3,6 +3,84 @@
 @{
     ViewData["Title"] = "Đăng ký tài khoản";
 }
+<style>
+    /* Căn giữa form đăng ký */
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    form {
+        max-width: 500px; /* Giới hạn chiều rộng */
+        margin: 50px auto; /* Căn giữa theo chiều ngang */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Căn chỉnh nhãn và input */
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Button nhóm */
+    .register-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    /* Nút đăng ký */
+    .btn-primary {
+        width: 48%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+    /* Nút hủy */
+    .btn-secondary {
+        width: 48%;
+        padding: 10px;
+        background-color: #dc3545;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+        .btn-secondary:hover {
+            background-color: #a71d2a;
+        }
+
+</style>
 
 <h2>Đăng ký tài khoản</h2>
 
@@ -75,5 +153,9 @@
         <span asp-validation-for="Password" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Đăng ký</button>
+    <!-- Button Đăng ký & Hủy -->
+    <div class="register-buttons">
+        <button type="submit" class="btn-primary">Đăng ký</button>
+        <a href="/login" class="btn-secondary">Hủy</a>
+    </div>
 </form>

@@ -92,19 +92,19 @@ namespace PRN222.Controllers
             if (savedOtp == null || savedEmail == null || expiryTime == null)
             {
                 ViewBag.Error = "Mã xác minh không hợp lệ hoặc đã hết hạn.";
-                return View("~/Views/User/ForgotPassword.cshtml");
+                return View("~/Views/User/VerifyOtp.cshtml");
             }
 
             if (DateTime.UtcNow > DateTime.Parse(expiryTime))
             {
                 ViewBag.Error = "Mã xác minh đã hết hạn.";
-                return View("~/Views/User/ForgotPassword.cshtml");
+                return View("~/Views/User/VerifyOtp.cshtml");
             }
 
             if (model.OtpCode != savedOtp || model.Email != savedEmail)
             {
                 ViewBag.Error = "Mã xác minh không đúng.";
-                return View("~/Views/User/ForgotPassword.cshtml");
+                return View("~/Views/User/VerifyOtp.cshtml");
             }
 
             HttpContext.Session.Remove("ResetOTP");

@@ -2,13 +2,85 @@
 @{
     ViewData["Title"] = "Xác Minh OTP";
 }
+<style>
+    /* Căn giữa toàn bộ nội dung */
+    .verify-otp-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
 
-<h2>Xác Minh OTP</h2>
-<form method="post">
-    <label>Email:</label>
-    <input asp-for="Email" class="form-control" required />
-    <label>Nhập Mã OTP:</label>
-    <input asp-for="OtpCode" class="form-control" required />
-    <button type="submit" class="btn btn-success mt-2">Xác Minh</button>
-</form>
-<p style="color: red;">@ViewBag.Error</p>
+    /* Định dạng form */
+    .verify-otp-form {
+        width: 400px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    /* Căn giữa tiêu đề */
+    .verify-otp-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Định dạng input */
+    .verify-otp-form label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .verify-otp-form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* Nút xác minh */
+    .verify-otp-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745; /* Màu xanh lá */
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+
+        .verify-otp-form button:hover {
+            background-color: #1e7e34;
+        }
+
+    /* Thông báo lỗi */
+    .verify-otp-error {
+        color: red;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<div class="verify-otp-container">
+    <h2 class="verify-otp-title">Xác Minh OTP</h2>
+    <form method="post" class="verify-otp-form">
+        <label>Email:</label>
+        <input asp-for="Email" class="form-control" required />
+        <label>Nhập Mã OTP:</label>
+        <input asp-for="OtpCode" class="form-control" required />
+        <button type="submit">Xác Minh</button>
+    </form>
+    <p class="verify-otp-error">@ViewBag.Error</p>
+</div>
+
