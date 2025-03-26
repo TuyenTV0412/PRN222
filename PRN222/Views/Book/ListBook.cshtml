@@ -131,6 +131,7 @@
                                     <th>Tên Sách</th>
                                     <th>Ảnh</th>
                                     <th>Tác Giả</th>
+                                    <th> Số Lượng</th>
                                     <th>Thao Tác</th>
                                 </tr>
                             </thead>
@@ -142,6 +143,7 @@
                                         <td>@book.BookName</td>
                                         <td><img src="@Url.Content("~/img/Book/" + book.Images)" style="width: 100%; height: auto; border-radius: 10px;"></td>
                                         <td>@book.Author.AuthorName</td>
+                                        <td>@book.Quantity</td>
                                         <td>
                                             <a href="@Url.Action("Index", "BookDetail", new { id = book.BookId })">Chi tiết |</a>
                                             <a href="@Url.Action("UpdateBookInfo", "BookDetail", new { bookID = book.BookId })">Cập nhật |</a>

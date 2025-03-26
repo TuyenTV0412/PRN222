@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 
-[Authorize]
+
 namespace PRN222.Controllers
 {
     public class BorrowController : Controller
@@ -161,6 +161,7 @@ namespace PRN222.Controllers
         {
             var borrow = await _context.Borrows
                 .Include(b => b.BorrowDetails)
+                .ThenInclude(bd => bd.Book)  // Include Book to update quantity
                 .FirstOrDefaultAsync(b => b.BorrowId == borrowId);
 
             if (borrow == null)
@@ -171,12 +172,19 @@ namespace PRN222.Controllers
             // Update the return date if provided
             if (returnDate.HasValue)
             {
-                borrow.ReturnDate = returnDate;
+                borrow.ReturnDate = returnDate.Value;
             }
 
             // Update status for all borrow details
             foreach (var detail in borrow.BorrowDetails)
             {
+                // Check if status is changing to "Đã trả" (status ID 2)
+                if (statusId == 2 && detail.StatusId != 2)
+                {
+                    // Increase book quantity by the borrowed amount
+                    detail.Book.Quantity += detail.Amount;
+                }
+
                 detail.StatusId = statusId;
             }
 
@@ -198,6 +206,7 @@ namespace PRN222.Controllers
             }
         }
 
+
         [HttpPost]
         [HttpPost]
         public async Task<IActionResult> SendBorrowEmails([FromForm] List<int> personIds)
@@ -212,7 +221,7 @@ namespace PRN222.Controllers
                 .Include(b => b.Person)
                 .Include(b => b.BorrowDetails)
                     .ThenInclude(bd => bd.Book)
-                .Where(b => personIds.Contains(b.PersonId)) // Chỉ lấy dữ liệu của PersonId được search
+                .Where(b => personIds.Contains(b.PersonId) ) // Chỉ lấy dữ liệu của PersonId được search
                 .ToList();
 
             foreach (var personId in personIds)

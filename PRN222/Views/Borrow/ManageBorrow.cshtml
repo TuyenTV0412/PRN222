@@ -247,7 +247,7 @@
                         </form>
                         @if (ViewBag.Deadline != null)
                         {
-                            <form method="post" asp-action="SendBorrowEmails">
+                            <form method="post" asp-action="SendBorrowEmails" class="search-form">
                                 @foreach (var personId in ViewBag.PersonIds)
                                 {
                                     <input type="hidden" name="personIds" value="@personId" />
