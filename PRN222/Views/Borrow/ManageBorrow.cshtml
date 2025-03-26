@@ -245,13 +245,17 @@
                             <input type="date" id="deadlineDate" name="deadlineDate" value="@ViewBag.Deadline?.ToString("yyyy-MM-dd")">
                             <button type="submit">Search</button>
                         </form>
-                        <form method="post" asp-action="SendBorrowEmails">
-                            @foreach (var personId in ViewBag.PersonIds)
-                            {
-                                <input type="hidden" name="personIds" value="@personId" />
-                            }
-                            <button type="submit" class="btn btn-primary">Gửi Email Tất Cả</button>
-                        </form>
+                        @if (ViewBag.Deadline != null)
+                        {
+                            <form method="post" asp-action="SendBorrowEmails">
+                                @foreach (var personId in ViewBag.PersonIds)
+                                {
+                                    <input type="hidden" name="personIds" value="@personId" />
+                                }
+                                <button type="submit" class="btn btn-primary">Gửi Email Tất Cả</button>
+                            </form>
+                        }
+                        
 
                         @if (borrowMap != null)
                         {

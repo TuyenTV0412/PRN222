@@ -1,53 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\sum24\\New folder (3)\\PRN222\\",
+  "WorkspaceRootPath": "D:\\CODE\\Fianl_PRN222\\PRN222\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\user\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\user\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\user\\verifyotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\verifyotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\views\\borrow\\manageborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\borrow\\manageborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\views\\card\\createcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\card\\createcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\views\\card\\checkcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\card\\checkcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\user\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\user\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\user\\verifyotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\user\\verifyotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|c:\\sum24\\new folder (3)\\prn222\\prn222\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -58,167 +74,205 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManageBorrow.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAAAPgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T04:01:26.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateCard.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Card\\CreateCard.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Card\\CreateCard.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Card\\CreateCard.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Card\\CreateCard.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T03:47:06.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "checkCard.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Card\\checkCard.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Card\\checkCard.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Card\\checkCard.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Card\\checkCard.cshtml",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAJwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T03:46:21.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\appsettings.json",
+              "RelativeDocumentMoniker": "PRN222\\appsettings.json",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\appsettings.json",
+              "RelativeToolTip": "PRN222\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T03:41:11.422Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BorrowController.cs",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Controllers\\BorrowController.cs",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\BorrowController.cs",
               "RelativeDocumentMoniker": "PRN222\\Controllers\\BorrowController.cs",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Controllers\\BorrowController.cs",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\BorrowController.cs",
               "RelativeToolTip": "PRN222\\Controllers\\BorrowController.cs",
-              "ViewState": "AQIAAN4AAAAAAAAAAAAQwPkAAABdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T19:37:11.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VerifyOtp.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\VerifyOtp.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\User\\VerifyOtp.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\VerifyOtp.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\User\\VerifyOtp.cshtml",
-              "ViewState": "AQIAADsAAAAAAAAAAAAkwEcAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:14:20.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\ForgotPassword.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\User\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\ForgotPassword.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\ForgotPassword.cshtml",
               "RelativeToolTip": "PRN222\\Views\\User\\ForgotPassword.cshtml",
               "ViewState": "AQIAADgAAAAAAAAAAAAkwEkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:09:22.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\Login.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\User\\Login.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\Login.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\User\\Login.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:03:44.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEwAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:02:45.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\User\\ResetPassword.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\ResetPassword.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\User\\ResetPassword.cshtml",
-              "ViewState": "AQIAADUAAAAAAAAAAAAkwE0AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:18:17.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\Register.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\User\\Register.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\User\\Register.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\User\\Register.cshtml",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAQwKEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:03:39.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "PRN222\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "PRN222\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T19:18:31.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T19:09:22.57Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RegisterController.cs",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Controllers\\RegisterController.cs",
-              "RelativeDocumentMoniker": "PRN222\\Controllers\\RegisterController.cs",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Controllers\\RegisterController.cs",
-              "RelativeToolTip": "PRN222\\Controllers\\RegisterController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T19:03:29.191Z",
-              "EditorCaption": ""
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\User\\Login.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\User\\Login.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T19:03:44.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T19:02:45.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AdminHome.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Admin\\AdminHome.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
               "RelativeToolTip": "PRN222\\Views\\Admin\\AdminHome.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADoAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-25T19:03:13.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "PRN222\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "PRN222\\Views\\_ViewStart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 11,
+              "Title": "VerifyOtp.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\VerifyOtp.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\User\\VerifyOtp.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\VerifyOtp.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\User\\VerifyOtp.cshtml",
+              "ViewState": "AQIAADsAAAAAAAAAAAAkwEcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:02:41.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T19:14:20.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\User\\ResetPassword.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\ResetPassword.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\User\\ResetPassword.cshtml",
+              "ViewState": "AQIAADUAAAAAAAAAAAAkwE0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T19:18:17.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\User\\Register.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\User\\Register.cshtml",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAQwKEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T19:03:39.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "PRN222\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "PRN222\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T19:18:31.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "PRN222\\Controllers\\RegisterController.cs",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "PRN222\\Controllers\\RegisterController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T19:03:29.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T19:02:41.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\sum24\\New folder (3)\\PRN222\\PRN222\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "PRN222\\Views\\_ViewImports.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:02:39.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T19:02:39.991Z"
             }
           ]
         }
