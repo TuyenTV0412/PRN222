@@ -209,7 +209,7 @@ namespace PRN222.Controllers
 
         [HttpPost]
         [HttpPost]
-        public async Task<IActionResult> SendBorrowEmails([FromForm] List<int> personIds)
+        public async Task<IActionResult> SendBorrowEmails([FromForm] List<int> personIds, DateTime? deadlineDate)
         {
             if (personIds == null || !personIds.Any())
             {
@@ -221,7 +221,8 @@ namespace PRN222.Controllers
                 .Include(b => b.Person)
                 .Include(b => b.BorrowDetails)
                     .ThenInclude(bd => bd.Book)
-                .Where(b => personIds.Contains(b.PersonId) ) // Chỉ lấy dữ liệu của PersonId được search
+                .Where(b => personIds.Contains(b.PersonId) 
+            && (deadlineDate == null || b.Deadline.Equals(DateOnly.FromDateTime(deadlineDate.Value)))) // Chỉ lấy dữ liệu của PersonId được search
                 .ToList();
 
             foreach (var personId in personIds)
