@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "D:\\CODE\\Fianl_PRN222\\PRN222\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\controllers\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\borrow\\borrowdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\borrow\\borrowdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\borrow\\historyborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\borrow\\historyborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\borrow\\manageborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\borrow\\manageborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|d:\\code\\fianl_prn222\\prn222\\prn222\\wwwroot\\img\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\wwwroot\\img\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\home\\bookdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\home\\bookdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\controllers\\bookdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\controllers\\bookdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\borrow\\manageborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\views\\borrow\\manageborrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\wwwroot\\img\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|solutionrelative:prn222\\wwwroot\\img\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3609A40B-D49D-4B95-B5DF-239957E94ECE}|PRN222\\PRN222.csproj|D:\\CODE\\Fianl_PRN222\\PRN222\\prn222\\views\\book\\listbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -94,23 +114,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "logo.png -  [English (United States)] - PNG [119x50, 32 bit, PNG]",
-              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\wwwroot\\img\\logo.png",
-              "RelativeDocumentMoniker": "PRN222\\wwwroot\\img\\logo.png",
-              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\wwwroot\\img\\logo.png -  [English (United States)] - PNG [119x50, 32 bit, PNG]",
-              "RelativeToolTip": "PRN222\\wwwroot\\img\\logo.png -  [English (United States)] - PNG [119x50, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-03-26T13:27:08.574Z",
-              "EditorCaption": " -  [English (United States)] - PNG [119x50, 32 bit, PNG]"
+              "Title": "HistoryBorrow.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\HistoryBorrow.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Borrow\\HistoryBorrow.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\HistoryBorrow.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Borrow\\HistoryBorrow.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T11:56:04.229Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BorrowDetail.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\BorrowDetail.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Borrow\\BorrowDetail.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\BorrowDetail.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Borrow\\BorrowDetail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T11:55:50.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookDetail.cshtml",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Home\\BookDetail.cshtml",
+              "RelativeDocumentMoniker": "PRN222\\Views\\Home\\BookDetail.cshtml",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Home\\BookDetail.cshtml",
+              "RelativeToolTip": "PRN222\\Views\\Home\\BookDetail.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAGwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T11:48:31.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "PRN222\\Controllers\\CheckoutController.cs",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "PRN222\\Controllers\\CheckoutController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAGYAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T11:41:19.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CardController.cs",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\CardController.cs",
+              "RelativeDocumentMoniker": "PRN222\\Controllers\\CardController.cs",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\CardController.cs",
+              "RelativeToolTip": "PRN222\\Controllers\\CardController.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAYwOMAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T11:40:45.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ManageBorrow.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
@@ -118,12 +187,11 @@
               "RelativeToolTip": "PRN222\\Views\\Borrow\\ManageBorrow.cshtml",
               "ViewState": "AQIAAOEAAAAAAAAAAAAAAAIBAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T04:01:26.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T04:01:26.195Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "CreateCard.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Card\\CreateCard.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Card\\CreateCard.cshtml",
@@ -135,20 +203,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BorrowController.cs",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\BorrowController.cs",
               "RelativeDocumentMoniker": "PRN222\\Controllers\\BorrowController.cs",
               "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\BorrowController.cs",
               "RelativeToolTip": "PRN222\\Controllers\\BorrowController.cs",
-              "ViewState": "AQIAAMgAAAAAAAAAAAAuwOMAAAAvAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBsAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T19:37:11.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T19:37:11.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "UpdateBorrow.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Borrow\\UpdateBorrow.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Borrow\\UpdateBorrow.cshtml",
@@ -160,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "checkCard.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Card\\checkCard.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Card\\checkCard.cshtml",
@@ -172,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Shared\\_Layout.cshtml",
@@ -180,24 +247,34 @@
               "RelativeToolTip": "PRN222\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAGwAAAAAAAAAAAAAANcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-25T19:02:45.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T19:02:45.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "BookDetailController.cs",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\BookDetailController.cs",
               "RelativeDocumentMoniker": "PRN222\\Controllers\\BookDetailController.cs",
               "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\BookDetailController.cs",
               "RelativeToolTip": "PRN222\\Controllers\\BookDetailController.cs",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAQwPkAAAAPAAAA",
+              "ViewState": "AQIAAN8AAAAAAAAAAAAAAJ0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T04:33:26.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
+              "Title": "logo.png -  [English (United States)] - PNG [119x50, 32 bit, PNG]",
+              "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\wwwroot\\img\\logo.png",
+              "RelativeDocumentMoniker": "PRN222\\wwwroot\\img\\logo.png",
+              "ToolTip": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\wwwroot\\img\\logo.png -  [English (United States)] - PNG [119x50, 32 bit, PNG]",
+              "RelativeToolTip": "PRN222\\wwwroot\\img\\logo.png -  [English (United States)] - PNG [119x50, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-26T13:27:08.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\appsettings.json",
               "RelativeDocumentMoniker": "PRN222\\appsettings.json",
@@ -209,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "ListBook.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Book\\ListBook.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Book\\ListBook.cshtml",
@@ -221,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Book.cs",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Models\\Book.cs",
               "RelativeDocumentMoniker": "PRN222\\Models\\Book.cs",
@@ -233,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\User\\ForgotPassword.cshtml",
@@ -245,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\Login.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\User\\Login.cshtml",
@@ -257,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "AdminHome.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\Admin\\AdminHome.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\Admin\\AdminHome.cshtml",
@@ -269,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "VerifyOtp.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\VerifyOtp.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\User\\VerifyOtp.cshtml",
@@ -281,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\User\\ResetPassword.cshtml",
@@ -293,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\User\\Register.cshtml",
@@ -305,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "PRN222\\Controllers\\LoginController.cs",
@@ -317,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "PRN222\\Controllers\\RegisterController.cs",
@@ -329,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\_ViewStart.cshtml",
@@ -341,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\CODE\\Fianl_PRN222\\PRN222\\PRN222\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "PRN222\\Views\\_ViewImports.cshtml",

@@ -152,72 +152,86 @@ namespace PRN222.Controllers
             if (bookid == null || !bookid.Any())
             {
                 TempData["ErrorMessage"] = "Vui lòng chọn ít nhất một cuốn sách";
-                return RedirectToAction("Index");
-            }
-
-            // Check book availability first
-            foreach (var bookId in bookid)
-            {
-                var book = await _prn222Context.Books.FindAsync(bookId);
-                if (book == null || book.Quantity <= 0)
-                {
-                    TempData["ErrorMessage"] = $"Sách '{book?.BookName ?? "Unknown"}' không đủ số lượng để mượn.";
-                    return RedirectToAction("CheckCard");
-                }
+                return RedirectToAction("CheckCard");
             }
 
             using (var transaction = await _prn222Context.Database.BeginTransactionAsync())
             {
                 try
                 {
-                    // Create new borrow record (let the database generate the ID)
+                    // Lấy danh sách sách trong 1 lần query
+                    var books = await _prn222Context.Books
+                        .Where(b => bookid.Contains(b.BookId))
+                        .ToListAsync();
+
+                    // Kiểm tra sách không tồn tại
+                    var missingBookIds = bookid.Except(books.Select(b => b.BookId)).ToList();
+                    if (missingBookIds.Any())
+                    {
+                        TempData["ErrorMessage"] = $"Không tìm thấy sách với ID: {string.Join(", ", missingBookIds)}";
+                        return RedirectToAction("CheckCard");
+                    }
+
+                    // Kiểm tra số lượng sách
+                    var outOfStockBooks = books.Where(b => b.Quantity < 1).ToList();
+                    if (outOfStockBooks.Any())
+                    {
+                        var bookNames = outOfStockBooks.Select(b => b.BookName);
+                        TempData["ErrorMessage"] = $"Sách đã hết: {string.Join(", ", bookNames)}";
+                        return RedirectToAction("CheckCard");
+                    }
+
+                    // Tạo phiếu mượn
                     var newBorrow = new Borrow
                     {
-                        // Remove explicit BorrowId assignment
                         PersonId = PersonId,
                         BorrowDate = DateOnly.FromDateTime(DateTime.Now),
                         Deadline = DateOnly.FromDateTime(DateTime.Now.AddDays(7))
                     };
 
                     await _prn222Context.Borrows.AddAsync(newBorrow);
-                    await _prn222Context.SaveChangesAsync();
+                    await _prn222Context.SaveChangesAsync(); // Lấy BorrowId
 
-                    // Now newBorrow.BorrowId will have the database-generated value
-
-                    // Create borrow details and update book quantities
-                    foreach (var bookId in bookid)
+                    // Tạo chi tiết mượn và cập nhật số lượng
+                    foreach (var book in books)
                     {
-                        var borrowDetail = new BorrowDetail
+                        // Thêm chi tiết mượn
+                        await _prn222Context.BorrowDetails.AddAsync(new BorrowDetail
                         {
                             BorrowId = newBorrow.BorrowId,
-                            BookId = bookId,
+                            BookId = book.BookId,
                             Amount = 1,
                             StatusId = 1
-                        };
+                        });
 
-                        await _prn222Context.BorrowDetails.AddAsync(borrowDetail);
-
-                        // Update book quantity
-                        var book = await _prn222Context.Books.FindAsync(bookId);
+                        // Giảm số lượng sách
                         book.Quantity -= 1;
-                        _prn222Context.Books.Update(book);
+                        _prn222Context.Entry(book).State = EntityState.Modified;
                     }
 
                     await _prn222Context.SaveChangesAsync();
                     await transaction.CommitAsync();
 
-                    TempData["ErrorMessage"] = "Đã tạo phiếu mượn thành công!";
-                    return RedirectToAction("ManageBorrow", "Borrow");
+                    TempData["SuccessMessage"] = "Tạo phiếu mượn thành công!";
+                    return RedirectToAction("ManageBorrow", "Borrow", new { personId = PersonId });
                 }
                 catch (DbUpdateException ex)
                 {
                     await transaction.RollbackAsync();
-                    Console.WriteLine($"Error: {ex.InnerException?.Message}");
-                    TempData["ErrorMessage"] = "Đã xảy ra lỗi khi tạo phiếu mượn.";
+                    Console.WriteLine($"Lỗi database: {ex.InnerException?.Message}");
+                    TempData["ErrorMessage"] = "Lỗi hệ thống khi xử lý mượn sách";
+                    return RedirectToAction("CheckCard");
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                    Console.WriteLine($"Lỗi không xác định: {ex.Message}");
+                    TempData["ErrorMessage"] = "Lỗi không mong đợi xảy ra";
                     return RedirectToAction("CheckCard");
                 }
             }
         }
+
 
 
     }

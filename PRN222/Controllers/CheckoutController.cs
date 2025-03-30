@@ -16,78 +16,101 @@ namespace PRN222.Controllers
         {
             return View();
         }
-
         [HttpPost]
         public async Task<IActionResult> CheckoutBooks(List<int> bookID, string validFrom, string validThru)
         {
-            // Lấy thông tin người dùng từ session hoặc database
+            // Kiểm tra session người dùng
             var username = HttpContext.Session.GetString("Username");
             if (string.IsNullOrEmpty(username))
             {
-                TempData["ErrorMessage"] = "Không tìm thấy thông tin người dùng.";
+                TempData["ErrorMessage"] = "Vui lòng đăng nhập để mượn sách";
                 return RedirectToAction("Login");
             }
 
-            // Tìm kiếm người dùng trong cơ sở dữ liệu
+            // Tìm thông tin người dùng
             var foundUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
             if (foundUser == null)
             {
-                TempData["ErrorMessage"] = "Không tìm thấy người dùng với tên đăng nhập này.";
+                TempData["ErrorMessage"] = "Không tìm thấy người dùng";
                 return RedirectToAction("Login");
             }
 
-            // Tạo mới phiếu mượn
-            var newBorrow = new Borrow
-            {
-                PersonId = foundUser.PersonId,
-                BorrowDate = DateOnly.Parse(validFrom),
-                Deadline = DateOnly.Parse(validThru)
-            };
+            // Kiểm tra số lượng sách trước khi tạo phiếu mượn
+            var errorMessages = new List<string>();
+            var booksToUpdate = new List<Book>();
 
+            foreach (var bookId in bookID)
+            {
+                var book = await _context.Books.FindAsync(bookId);
+                if (book == null)
+                {
+                    errorMessages.Add($"Không tìm thấy sách ID {bookId}");
+                }
+                else if (book.Quantity < 1)
+                {
+                    errorMessages.Add($"Sách '{book.BookName}' hiện đã mượn hết, vui lòng mượn lại sau!");
+                }
+                else
+                {
+                    booksToUpdate.Add(book);
+                }
+            }
+
+            // Nếu có lỗi, trả về thông báo
+            if (errorMessages.Any())
+            {
+                TempData["ErrorMessage"] = string.Join("<br>", errorMessages);
+                return RedirectToAction("BorrowDetail", "BookDetail");
+            }
+
+            // Bắt đầu transaction
+            using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                // Lưu phiếu mượn vào cơ sở dữ liệu
+                // Tạo phiếu mượn
+                var newBorrow = new Borrow
+                {
+                    PersonId = foundUser.PersonId,
+                    BorrowDate = DateOnly.Parse(validFrom),
+                    Deadline = DateOnly.Parse(validThru)
+                };
+
                 await _context.Borrows.AddAsync(newBorrow);
                 await _context.SaveChangesAsync();
 
-                // Lấy ID của phiếu mượn vừa tạo
-                var borrowId = newBorrow.BorrowId;
-
-                // Tạo chi tiết mượn cho từng sách
-                foreach (var bookId in bookID)
+                // Tạo chi tiết mượn và cập nhật số lượng
+                foreach (var book in booksToUpdate)
                 {
-                    var borrowDetail = new BorrowDetail
+                    // Thêm chi tiết mượn
+                    await _context.BorrowDetails.AddAsync(new BorrowDetail
                     {
-                        BorrowId = borrowId,
-                        BookId = bookId,
-                        Amount =1,
-                        StatusId =1
-                    };
+                        BorrowId = newBorrow.BorrowId,
+                        BookId = book.BookId,
+                        Amount = 1,
+                        StatusId = 1
+                    });
 
-                    await _context.BorrowDetails.AddAsync(borrowDetail);
-                    // Cập nhật số lượng sách trong bảng Books
-                    var book = await _context.Books.FindAsync(bookId);
-                    if (book != null && book.Quantity > 0)
-                    {
-                        book.Quantity -= 1;
-                        _context.Books.Update(book);
-                    }
+                    // Giảm số lượng sách
+                    book.Quantity -= 1;
+                    _context.Books.Update(book);
                 }
 
                 await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
 
                 HttpContext.Session.Remove("BorrowBooks");
-                TempData["SuccessMessage"] = "Đã mượn sách thành công!";
-                return RedirectToAction("Index", "Home");
+                TempData["ErrorMessage"] = "Mượn sách thành công!";
+                return RedirectToAction("HistoryBorrow", "Borrow", new { id = foundUser.PersonId });
             }
             catch (DbUpdateException ex)
             {
-                // Ghi log lỗi chi tiết từ inner exception
+                await transaction.RollbackAsync();
                 Console.WriteLine($"Error: {ex.InnerException?.Message}");
-                TempData["ErrorMessage"] = "Đã xảy ra lỗi khi mượn sách.";
+                TempData["ErrorMessage"] = $"Lỗi khi xử lý: {ex.InnerException?.Message}";
                 return RedirectToAction("BorrowDetail", "BookDetail");
             }
         }
+
 
 
 

@@ -100,6 +100,16 @@
         <div class="container">
             <div class="row">
                 <h3 style="margin: 20px auto; text-align: center;"><strong>Lịch Sử Mượn Sách</strong></h3>
+                <!-- Hiển thị thông báo lỗi nếu có -->
+                @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+                {
+                    <p id="errorMessage" style="color: red;">@Html.Raw(TempData["ErrorMessage"])</p>
+                    <script>
+                        setTimeout(function () {
+                            document.getElementById("errorMessage").style.display = "none";
+                        }, 5000); // Biến mất sau 5 giây
+                    </script>
+                }
                 <div style="width: 95%; margin: 0 auto">
                     <table>
                         <thead>
